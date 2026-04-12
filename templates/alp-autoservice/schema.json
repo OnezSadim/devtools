@@ -1,0 +1,203 @@
+[
+  {
+    "key": "salonName",
+    "label": "Bedrijfsnaam",
+    "type": "text",
+    "section": "general",
+    "required": true,
+    "default": "Alp Autoservice"
+  },
+  {
+    "key": "city",
+    "label": "Stad",
+    "type": "text",
+    "section": "general",
+    "required": true
+  },
+  {
+    "key": "heading",
+    "label": "Hero Titel",
+    "type": "text",
+    "section": "hero",
+    "default": "Welkom bij Alp Autoservice"
+  },
+  {
+    "key": "tagline",
+    "label": "Tagline",
+    "type": "textarea",
+    "section": "hero",
+    "default": "Uw betrouwbare garage voor APK, onderhoud en reparatie. RDW-erkend, transparante prijzen, alle merken welkom."
+  },
+  {
+    "key": "heroImage",
+    "label": "Hero Achtergrond",
+    "type": "image",
+    "section": "hero"
+  },
+  {
+    "key": "logoUrl",
+    "label": "Logo URL",
+    "type": "image",
+    "section": "branding"
+  },
+  {
+    "key": "primaryColor",
+    "label": "Hoofdkleur",
+    "type": "color",
+    "section": "branding",
+    "default": "#cc0000"
+  },
+  {
+    "key": "primaryColorDark",
+    "label": "Hoofdkleur Donker",
+    "type": "color",
+    "section": "branding",
+    "default": "#a00000"
+  },
+  {
+    "key": "primaryColorLight",
+    "label": "Hoofdkleur Licht",
+    "type": "color",
+    "section": "branding",
+    "default": "#ff3333"
+  },
+  {
+    "key": "apkGallery",
+    "label": "APK Foto's",
+    "type": "array",
+    "section": "apk",
+    "fields": [
+      { "key": "src", "label": "Foto URL", "type": "image" },
+      { "key": "alt", "label": "Beschrijving", "type": "text" }
+    ]
+  },
+  {
+    "key": "repairGallery",
+    "label": "Reparatie Foto's",
+    "type": "array",
+    "section": "reparatie",
+    "fields": [
+      { "key": "src", "label": "Foto URL", "type": "image" },
+      { "key": "alt", "label": "Beschrijving", "type": "text" }
+    ]
+  },
+  {
+    "key": "maintenanceGallery",
+    "label": "Onderhoud Foto's",
+    "type": "array",
+    "section": "onderhoud",
+    "fields": [
+      { "key": "src", "label": "Foto URL", "type": "image" },
+      { "key": "alt", "label": "Beschrijving", "type": "text" }
+    ]
+  },
+  {
+    "key": "services",
+    "label": "Diensten",
+    "type": "array",
+    "section": "services",
+    "fields": [
+      { "key": "icon", "label": "Icoon", "type": "select", "options": ["🔧", "🔍", "🛞", "🛢️", "❄️", "⚙️", "🔋", "💡", "🚗", "🏎️"] },
+      { "key": "name", "label": "Dienst Naam", "type": "text" },
+      { "key": "description", "label": "Beschrijving", "type": "textarea" }
+    ]
+  },
+  {
+    "key": "servicesSubtitle",
+    "label": "Diensten Ondertitel",
+    "type": "text",
+    "section": "services",
+    "default": "Professionele service voor elk merk en model"
+  },
+  {
+    "key": "showReviews",
+    "label": "Toon Reviews",
+    "type": "toggle",
+    "section": "reviews",
+    "default": true
+  },
+  {
+    "key": "reviewScore",
+    "label": "Review Score",
+    "type": "text",
+    "section": "reviews"
+  },
+  {
+    "key": "reviewCount",
+    "label": "Aantal Reviews",
+    "type": "text",
+    "section": "reviews"
+  },
+  {
+    "key": "reviews",
+    "label": "Reviews",
+    "type": "array",
+    "section": "reviews",
+    "fields": [
+      { "key": "name", "label": "Naam", "type": "text" },
+      { "key": "text", "label": "Review Tekst", "type": "textarea" }
+    ]
+  },
+  {
+    "key": "hours",
+    "label": "Openingstijden",
+    "type": "array",
+    "section": "hours",
+    "fields": [
+      { "key": "day", "label": "Dag", "type": "text" },
+      { "key": "time", "label": "Tijd", "type": "text" }
+    ]
+  },
+  {
+    "key": "phone",
+    "label": "Telefoonnummer",
+    "type": "text",
+    "section": "contact",
+    "default": "+31 6 40608806"
+  },
+  {
+    "key": "phoneHref",
+    "label": "Telefoon Link",
+    "type": "text",
+    "section": "contact",
+    "default": "+31640608806"
+  },
+  {
+    "key": "email",
+    "label": "E-mail",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "emailHref",
+    "label": "E-mail Link",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "address",
+    "label": "Adres",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "mapsUrl",
+    "label": "Google Maps Link",
+    "type": "url",
+    "section": "contact"
+  },
+  {
+    "key": "copyrightText",
+    "label": "Copyright Tekst",
+    "type": "text",
+    "section": "footer",
+    "default": "© Alp Autoservice"
+  },
+  {
+    "key": "bookingUrl",
+    "label": "Booking URL",
+    "type": "url",
+    "section": "booking",
+    "required": false
+  }
+]
