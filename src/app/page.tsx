@@ -36,6 +36,11 @@ export default function Home() {
             <h2 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">Regex Tester</h2>
             <p className="text-gray-400 text-sm mt-2">Test regular expressions with live matching</p>
           </a>
+
+          <a href="/form" className="block p-6 bg-gray-900 border border-gray-800 rounded-xl hover:border-blue-500/50 hover:bg-gray-900/80 transition-all group">
+            <h2 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">Aanmeldformulier</h2>
+            <p className="text-gray-400 text-sm mt-2">Publiek formulier &mdash; geen login nodig</p>
+          </a>
       </div>
     </div>
   )
