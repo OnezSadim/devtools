@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Aanmeldformulier</title>
+<title>Intakeformulier – Outlight Systems</title>
 <style>
   *,*::before,*::after { box-sizing: border-box; }
   body {
@@ -12,10 +12,10 @@
     background: #0a0a0f;
     color: #f1f1f1;
     min-height: 100vh;
-    padding: 24px 16px;
+    padding: 24px 16px 64px;
     line-height: 1.5;
   }
-  .wrap { max-width: 640px; margin: 0 auto; }
+  .wrap { max-width: 720px; margin: 0 auto; }
   header { margin-bottom: 28px; }
   h1 {
     font-size: 28px; margin: 0 0 8px;
@@ -23,7 +23,8 @@
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   p.lead { color: #9ca3af; margin: 0; }
-  form {
+  form { display: grid; gap: 20px; }
+  section {
     background: #111118;
     border: 1px solid #262633;
     border-radius: 14px;
@@ -31,9 +32,17 @@
     display: grid;
     gap: 18px;
   }
+  section h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #e5e7eb;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #262633;
+  }
   label.lbl { font-size: 14px; font-weight: 500; color: #d1d5db; display: block; margin-bottom: 6px; }
+  .help { font-size: 12px; color: #9ca3af; margin: -2px 0 8px; }
   .req { color: #f87171; }
-  input[type=text], input[type=email], input[type=tel], textarea, select {
+  input[type=text], input[type=email], input[type=tel], input[type=url], textarea, select {
     width: 100%;
     background: #07070b;
     border: 1px solid #2d2d3a;
@@ -44,9 +53,11 @@
     font-family: inherit;
   }
   input:focus, textarea:focus, select:focus { outline: none; border-color: #3b82f6; }
-  textarea { resize: vertical; min-height: 120px; }
+  textarea { resize: vertical; min-height: 100px; }
+  .radio-row { display: flex; gap: 18px; flex-wrap: wrap; }
+  .radio-row label { font-size: 14px; color: #d1d5db; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
   .check { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: #d1d5db; }
-  .check input { margin-top: 4px; }
+  .check input { margin-top: 4px; flex-shrink: 0; }
   button {
     width: 100%;
     padding: 14px;
@@ -55,7 +66,7 @@
     border: 0;
     border-radius: 10px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
   }
   button:hover { background: #3b82f6; }
@@ -78,85 +89,277 @@
     cursor: pointer;
   }
   footer { margin-top: 24px; text-align: center; color: #6b7280; font-size: 12px; }
+  .gdpr {
+    background: #0f0f17;
+    border: 1px solid #262633;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 13px;
+    color: #d1d5db;
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>Aanmeldformulier</h1>
-    <p class="lead">Vul het formulier in. Geen account of login nodig — bij verzenden opent je mail-app met de antwoorden klaar om te versturen.</p>
+    <h1>Intakeformulier – Outlight Systems</h1>
+    <p class="lead">Vul het formulier zo volledig mogelijk in. Bij verzenden opent uw mail-app met de antwoorden om naar ons te sturen.</p>
   </header>
 
-  <form id="f">
-    <div>
-      <label class="lbl">Naam <span class="req">*</span></label>
-      <input type="text" name="naam" required>
-    </div>
-    <div>
-      <label class="lbl">E-mailadres <span class="req">*</span></label>
-      <input type="email" name="email" required>
-    </div>
-    <div>
-      <label class="lbl">Telefoonnummer</label>
-      <input type="tel" name="telefoon">
-    </div>
-    <div>
-      <label class="lbl">Onderwerp</label>
-      <input type="text" name="onderwerp">
-    </div>
-    <div>
-      <label class="lbl">Bericht <span class="req">*</span></label>
-      <textarea name="bericht" required></textarea>
-    </div>
-    <div>
-      <label class="lbl">Hoe heb je ons gevonden?</label>
-      <select name="bron">
-        <option value="">Kies een optie</option>
-        <option value="zoekmachine">Via een zoekmachine</option>
-        <option value="social">Social media</option>
-        <option value="vriend">Via vrienden / kennissen</option>
-        <option value="anders">Anders</option>
-      </select>
-    </div>
-    <label class="check">
-      <input type="checkbox" name="akkoord" value="ja" required>
-      <span>Ik ga akkoord met het verwerken van bovenstaande gegevens.</span>
-    </label>
-    <button type="submit">Verstuur</button>
+  <form id="f" novalidate>
+
+    <section>
+      <h2>Sectie 1 – Bedrijf &amp; contact</h2>
+
+      <div>
+        <label class="lbl">Naam contactpersoon / eigenaar <span class="req">*</span></label>
+        <input type="text" name="naam" required>
+      </div>
+      <div>
+        <label class="lbl">Mag deze naam op de website?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="naam_op_site" value="ja"> Ja</label>
+          <label><input type="radio" name="naam_op_site" value="nee"> Nee</label>
+        </div>
+      </div>
+      <div>
+        <label class="lbl">E-mailadres <span class="req">*</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label class="lbl">Telefoonnummer <span class="req">*</span></label>
+        <p class="help">Belangrijk – dit wordt gebruikt voor het systeem.</p>
+        <input type="tel" name="telefoon" required>
+      </div>
+      <div>
+        <label class="lbl">Bedrijfsadres <span class="req">*</span></label>
+        <input type="text" name="adres" required>
+      </div>
+      <div>
+        <label class="lbl">Stad <span class="req">*</span></label>
+        <input type="text" name="stad" required>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sectie 2 – Website &amp; branding</h2>
+
+      <div>
+        <label class="lbl">Heeft u al een website? Zo ja, wat is uw website-URL?</label>
+        <input type="text" name="huidige_website" placeholder="bv. https://...">
+      </div>
+      <div>
+        <label class="lbl">Welke domeinnaam wilt u? <span class="req">*</span></label>
+        <p class="help">Een richting / suggestie is ook goed.</p>
+        <input type="text" name="domein" required>
+      </div>
+      <div class="gdpr">
+        <strong>Belangrijk!</strong> Wilt u ons nog foto's van uw logo en zaak opsturen?<br>
+        <label class="check" style="margin-top:8px;">
+          <input type="checkbox" name="fotos_opsturen" value="ja" required>
+          <span>Ja, ik stuur foto's van logo en zaak na (per e-mail of WhatsApp).</span>
+        </label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sectie 3 – Informatie op de website</h2>
+
+      <div>
+        <label class="lbl">Welke diensten biedt u aan? <span class="req">*</span></label>
+        <p class="help">Wilt u een schatting van de kosten op de site? Zo ja, schrijf de prijzen erachter.</p>
+        <textarea name="diensten" required placeholder="Bv. Onderhoudsbeurt – €120&#10;APK-keuring – €45"></textarea>
+      </div>
+      <div>
+        <label class="lbl">Wat zijn uw openingstijden?</label>
+        <p class="help">Voorbeeld: Ma–Vr: 09:00–18:00 / Za: 10:00–16:00</p>
+        <textarea name="openingstijden" placeholder="Ma–Vr: 09:00–18:00&#10;Za: 10:00–16:00"></textarea>
+      </div>
+      <div>
+        <label class="lbl">Bent u APK, RDW of anders erkend?</label>
+        <input type="text" name="erkenningen" placeholder="bv. APK, RDW, Bovag, …">
+      </div>
+      <div>
+        <label class="lbl">Welke kleur(en) moeten we gebruiken op de website?</label>
+        <input type="text" name="kleuren" placeholder="bv. donkerblauw + wit">
+      </div>
+      <div>
+        <label class="lbl">Hoelang bestaan jullie en hoeveel ervaring hebben jullie?</label>
+        <textarea name="ervaring"></textarea>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sectie 4 – Klanten &amp; reviews</h2>
+
+      <div>
+        <label class="lbl">Heeft u een lijst met bestaande klanten?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="klantenlijst" value="ja"> Ja</label>
+          <label><input type="radio" name="klantenlijst" value="nee"> Nee</label>
+        </div>
+      </div>
+      <div>
+        <label class="lbl">Wat is de link naar uw Google reviews-profiel?</label>
+        <input type="url" name="google_reviews" placeholder="https://...">
+      </div>
+    </section>
+
+    <section>
+      <h2>Sectie 5 – Boekingen &amp; kalender</h2>
+
+      <div>
+        <label class="lbl">Gebruikt u momenteel een boekingsysteem?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="boekingsysteem" value="ja"> Ja</label>
+          <label><input type="radio" name="boekingsysteem" value="nee"> Nee</label>
+        </div>
+      </div>
+      <div>
+        <label class="lbl">Zo ja, welke? (optioneel)</label>
+        <input type="text" name="boekingsysteem_welke">
+      </div>
+      <div>
+        <label class="lbl">Gebruikt u Google Calendar of iets anders?</label>
+        <input type="text" name="kalender" placeholder="bv. Google Calendar, Outlook, geen">
+      </div>
+    </section>
+
+    <section>
+      <h2>Sectie 6 – Automatiseringen</h2>
+
+      <div>
+        <label class="lbl">Wilt u dat klanten automatisch herinneringen ontvangen voor een afspraak?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="auto_herinneringen" value="ja"> Ja</label>
+          <label><input type="radio" name="auto_herinneringen" value="nee"> Nee</label>
+        </div>
+      </div>
+      <div>
+        <label class="lbl">Wilt u dat wij oude klanten automatisch opnieuw benaderen?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="auto_reactivatie" value="ja"> Ja</label>
+          <label><input type="radio" name="auto_reactivatie" value="nee"> Nee</label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sectie 7 – Extra</h2>
+
+      <div>
+        <label class="lbl">Wilt u dat klanten online kunnen betalen?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="online_betalen" value="ja"> Ja</label>
+          <label><input type="radio" name="online_betalen" value="nee"> Nee</label>
+        </div>
+      </div>
+      <div>
+        <label class="lbl">Heeft u nog speciale wensen voor de website, voorbeeld-websites om naar te refereren of andere wensen?</label>
+        <textarea name="wensen"></textarea>
+      </div>
+      <div>
+        <label class="lbl">Zijn er nog bepaalde teksten die u op de website wilt?</label>
+        <textarea name="teksten"></textarea>
+      </div>
+    </section>
+
+    <section>
+      <h2>GDPR / Toestemming</h2>
+      <label class="check">
+        <input type="checkbox" name="gdpr_akkoord" value="ja" required>
+        <span>
+          Ik geef Outlight Systems toestemming om mij (en mijn klantenbestand) berichten te sturen
+          via SMS en e-mail voor het beheer van afspraken, promoties en serviceberichten. Ik
+          begrijp dat ik deze toestemming altijd kan intrekken. <span class="req">*</span>
+        </span>
+      </label>
+    </section>
+
+    <button type="submit">Verstuur intake</button>
   </form>
 
   <div id="ok" class="success" style="display:none;">
     <h2>Bedankt!</h2>
-    <p>Je mail-app is geopend met je antwoorden. Tik op verzenden om te bevestigen.</p>
-    <button class="again" type="button" onclick="resetForm()">Nog een antwoord versturen</button>
+    <p>Uw mail-app is geopend met alle antwoorden. Tik op verzenden om de intake naar Outlight Systems te sturen.</p>
+    <button class="again" type="button" onclick="resetForm()">Nog een formulier invullen</button>
   </div>
 
-  <footer>Gehost via jsDelivr CDN · geen tracking, geen login</footer>
+  <footer>Outlight Systems · Intakeformulier</footer>
 </div>
 
 <script>
-  // Vervang dit door je eigen e-mailadres om antwoorden te ontvangen.
+  // Vervang dit door het Outlight Systems-mailadres waar intakes naartoe moeten.
   var DESTINATION_EMAIL = 'change-me@example.com';
 
-  var labels = {
-    naam: 'Naam',
-    email: 'E-mailadres',
-    telefoon: 'Telefoonnummer',
-    onderwerp: 'Onderwerp',
-    bericht: 'Bericht',
-    bron: 'Hoe gevonden',
-    akkoord: 'Akkoord met verwerking'
-  };
+  var sections = [
+    { title: 'Sectie 1 – Bedrijf & contact', fields: [
+      ['naam', 'Naam contactpersoon / eigenaar'],
+      ['naam_op_site', 'Naam op de website?'],
+      ['email', 'E-mailadres'],
+      ['telefoon', 'Telefoonnummer'],
+      ['adres', 'Bedrijfsadres'],
+      ['stad', 'Stad']
+    ]},
+    { title: 'Sectie 2 – Website & branding', fields: [
+      ['huidige_website', 'Huidige website-URL'],
+      ['domein', 'Gewenste domeinnaam'],
+      ['fotos_opsturen', "Foto's van logo en zaak opsturen"]
+    ]},
+    { title: 'Sectie 3 – Informatie op de website', fields: [
+      ['diensten', 'Diensten + eventuele prijzen'],
+      ['openingstijden', 'Openingstijden'],
+      ['erkenningen', 'APK / RDW / overige erkenningen'],
+      ['kleuren', 'Gewenste kleuren'],
+      ['ervaring', 'Bestaansduur en ervaring']
+    ]},
+    { title: 'Sectie 4 – Klanten & reviews', fields: [
+      ['klantenlijst', 'Lijst met bestaande klanten'],
+      ['google_reviews', 'Google reviews-profiel']
+    ]},
+    { title: 'Sectie 5 – Boekingen & kalender', fields: [
+      ['boekingsysteem', 'Boekingsysteem in gebruik'],
+      ['boekingsysteem_welke', 'Welk boekingsysteem'],
+      ['kalender', 'Kalender (Google / anders)']
+    ]},
+    { title: 'Sectie 6 – Automatiseringen', fields: [
+      ['auto_herinneringen', 'Automatische herinneringen'],
+      ['auto_reactivatie', 'Oude klanten opnieuw benaderen']
+    ]},
+    { title: 'Sectie 7 – Extra', fields: [
+      ['online_betalen', 'Online betalen'],
+      ['wensen', 'Speciale wensen / referentie-sites'],
+      ['teksten', 'Teksten voor op de website']
+    ]},
+    { title: 'GDPR / Toestemming', fields: [
+      ['gdpr_akkoord', 'Akkoord met SMS/e-mail-toestemming']
+    ]}
+  ];
 
   document.getElementById('f').addEventListener('submit', function(e) {
     e.preventDefault();
+    if (!e.target.checkValidity()) {
+      e.target.reportValidity();
+      return;
+    }
     var fd = new FormData(e.target);
     var lines = [];
-    Object.keys(labels).forEach(function(k) {
-      var v = fd.get(k);
-      if (v) lines.push(labels[k] + ': ' + v);
+    sections.forEach(function(sec) {
+      var sectionLines = [];
+      sec.fields.forEach(function(pair) {
+        var name = pair[0], label = pair[1];
+        var v = fd.get(name);
+        if (v && String(v).trim() !== '') {
+          sectionLines.push(label + ': ' + v);
+        }
+      });
+      if (sectionLines.length) {
+        lines.push('--- ' + sec.title + ' ---');
+        lines = lines.concat(sectionLines);
+        lines.push('');
+      }
     });
-    var subject = 'Nieuwe aanmelding van ' + (fd.get('naam') || 'onbekend');
+    var subject = 'Nieuwe intake – ' + (fd.get('naam') || 'onbekend');
     var body = lines.join('\n');
     var href = 'mailto:' + DESTINATION_EMAIL +
       '?subject=' + encodeURIComponent(subject) +
@@ -164,6 +367,7 @@
     window.location.href = href;
     document.getElementById('f').style.display = 'none';
     document.getElementById('ok').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   function resetForm() {
