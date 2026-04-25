@@ -2,50 +2,50 @@
 
 import { useState } from 'react'
 
-type Status = 'idle' | 'sending' | 'success' | 'error'
+// Vervang dit door je eigen e-mailadres om antwoorden te ontvangen.
+const DESTINATION_EMAIL = 'change-me@example.com'
 
 export default function FormPage() {
-  const [status, setStatus] = useState<Status>('idle')
-  const [error, setError] = useState<string | null>(null)
+  const [submitted, setSubmitted] = useState(false)
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setStatus('sending')
-    setError(null)
-
     const form = e.currentTarget
-    const formData = new FormData(form)
-    const payload: Record<string, string> = {}
-    formData.forEach((value, key) => {
-      payload[key] = String(value)
+    const data = new FormData(form)
+
+    const lines: string[] = []
+    const labels: Record<string, string> = {
+      naam: 'Naam',
+      email: 'E-mailadres',
+      telefoon: 'Telefoonnummer',
+      onderwerp: 'Onderwerp',
+      bericht: 'Bericht',
+      bron: 'Hoe gevonden',
+      akkoord: 'Akkoord met verwerking',
+    }
+    Object.keys(labels).forEach((key) => {
+      const value = data.get(key)
+      if (value) lines.push(`${labels[key]}: ${value}`)
     })
 
-    try {
-      const res = await fetch('/api/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}))
-        throw new Error(body.error || `Verzenden mislukt (${res.status})`)
-      }
-      setStatus('success')
-      form.reset()
-    } catch (err) {
-      setStatus('error')
-      setError(err instanceof Error ? err.message : 'Onbekende fout')
-    }
+    const subject = `Nieuwe aanmelding van ${data.get('naam') || 'onbekend'}`
+    const body = lines.join('\n')
+    const href = `mailto:${DESTINATION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+    window.location.href = href
+    setSubmitted(true)
   }
 
-  if (status === 'success') {
+  if (submitted) {
     return (
       <div className="max-w-2xl mx-auto">
         <div className="bg-gray-900 border border-green-500/40 rounded-xl p-8 text-center">
           <h1 className="text-2xl font-bold text-green-400 mb-2">Bedankt!</h1>
-          <p className="text-gray-300">Je antwoorden zijn ontvangen.</p>
+          <p className="text-gray-300">
+            Je mail-app is geopend met je antwoorden. Tik op verzenden om te bevestigen.
+          </p>
           <button
-            onClick={() => setStatus('idle')}
+            onClick={() => setSubmitted(false)}
             className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-white text-sm"
           >
             Nog een antwoord versturen
@@ -62,7 +62,8 @@ export default function FormPage() {
           Aanmeldformulier
         </h1>
         <p className="text-gray-400">
-          Vul het formulier in. Geen account of login nodig &mdash; je antwoorden worden direct doorgestuurd.
+          Vul het formulier in. Geen account of login nodig &mdash; bij verzenden opent je mail-app
+          met de antwoorden klaar om te versturen.
         </p>
       </div>
 
@@ -104,18 +105,11 @@ export default function FormPage() {
           <span>Ik ga akkoord met het verwerken van bovenstaande gegevens.</span>
         </label>
 
-        {status === 'error' && (
-          <div className="text-sm text-red-400 bg-red-500/10 border border-red-500/30 rounded-lg p-3">
-            {error}
-          </div>
-        )}
-
         <button
           type="submit"
-          disabled={status === 'sending'}
-          className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 disabled:cursor-not-allowed rounded-lg text-white font-medium transition-colors"
+          className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg text-white font-medium transition-colors"
         >
-          {status === 'sending' ? 'Versturen…' : 'Verstuur'}
+          Verstuur
         </button>
       </form>
     </div>
