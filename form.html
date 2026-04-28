@@ -103,7 +103,7 @@
 <div class="wrap">
   <header>
     <h1>Intakeformulier – Outlight Systems</h1>
-    <p class="lead">Vul het formulier zo volledig mogelijk in. Bij verzenden opent uw mail-app met de antwoorden om naar ons te sturen.</p>
+    <p class="lead">Vul het formulier zo volledig mogelijk in. Bij verzenden komt uw intake direct bij Outlight Systems binnen.</p>
   </header>
 
   <form id="f" novalidate>
@@ -281,15 +281,22 @@
 
   <div id="ok" class="success" style="display:none;">
     <h2>Bedankt!</h2>
-    <p>Uw mail-app is geopend met alle antwoorden. Tik op verzenden om de intake naar Outlight Systems te sturen.</p>
+    <p>Uw intake is verstuurd naar Outlight Systems. We nemen zo snel mogelijk contact met u op.</p>
     <button class="again" type="button" onclick="resetForm()">Nog een formulier invullen</button>
+  </div>
+
+  <div id="err" class="success" style="display:none; border-color: rgba(248,113,113,.4);">
+    <h2 style="color:#f87171;">Verzenden mislukt</h2>
+    <p id="errmsg">Er ging iets mis bij het verzenden. Probeer het later opnieuw.</p>
+    <button class="again" type="button" onclick="resetForm()">Terug naar formulier</button>
   </div>
 
   <footer>Outlight Systems · Intakeformulier</footer>
 </div>
 
 <script>
-  var DESTINATION_EMAIL = 'rezacaffin@gmail.com';
+  // FormSubmit endpoint — stuurt inzendingen naar dit adres.
+  var FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/rezacaffin@gmail.com';
 
   var sections = [
     { title: 'Sectie 1 – Bedrijf & contact', fields: [
@@ -343,6 +350,11 @@
     }
     var fd = new FormData(e.target);
     var lines = [];
+    var payload = {
+      _subject: 'Nieuwe intake – ' + (fd.get('naam') || 'onbekend'),
+      _captcha: 'false',
+      _template: 'table'
+    };
     sections.forEach(function(sec) {
       var sectionLines = [];
       sec.fields.forEach(function(pair) {
@@ -350,6 +362,7 @@
         var v = fd.get(name);
         if (v && String(v).trim() !== '') {
           sectionLines.push(label + ': ' + v);
+          payload[label] = String(v);
         }
       });
       if (sectionLines.length) {
@@ -358,21 +371,45 @@
         lines.push('');
       }
     });
-    var subject = 'Nieuwe intake – ' + (fd.get('naam') || 'onbekend');
-    var body = lines.join('\n');
-    var href = 'mailto:' + DESTINATION_EMAIL +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
-    window.location.href = href;
-    document.getElementById('f').style.display = 'none';
-    document.getElementById('ok').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    payload['_volledig_overzicht'] = lines.join('\n');
+
+    var btn = e.target.querySelector('button[type=submit]');
+    var oldText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Versturen…';
+
+    fetch(FORMSUBMIT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function() {
+        document.getElementById('f').style.display = 'none';
+        document.getElementById('ok').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      })
+      .catch(function(err) {
+        document.getElementById('errmsg').textContent =
+          'Er ging iets mis bij het verzenden (' + err.message + '). Probeer het opnieuw of mail rechtstreeks naar berichten@outlightsystems.nl.';
+        document.getElementById('f').style.display = 'none';
+        document.getElementById('err').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.textContent = oldText;
+      });
   });
 
   function resetForm() {
     document.getElementById('f').reset();
     document.getElementById('f').style.display = 'grid';
     document.getElementById('ok').style.display = 'none';
+    document.getElementById('err').style.display = 'none';
   }
 </script>
 </body>
