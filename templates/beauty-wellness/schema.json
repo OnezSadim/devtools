@@ -1,0 +1,424 @@
+[
+  {
+    "key": "salonName",
+    "label": "Salon Naam",
+    "type": "text",
+    "section": "general",
+    "required": true
+  },
+  {
+    "key": "city",
+    "label": "Stad",
+    "type": "text",
+    "section": "general",
+    "required": true
+  },
+  {
+    "key": "pageTitle",
+    "label": "Pagina Titel",
+    "type": "text",
+    "section": "general"
+  },
+  {
+    "key": "defaultLanguage",
+    "label": "Standaard Taal",
+    "type": "select",
+    "section": "general",
+    "options": ["nl", "en"],
+    "default": "nl"
+  },
+  {
+    "key": "languageMode",
+    "label": "Taal Modus",
+    "type": "select",
+    "section": "general",
+    "options": ["nl_en", "en_nl", "nl_only", "en_only"],
+    "default": "nl_en"
+  },
+  {
+    "key": "preset",
+    "label": "Template Preset",
+    "type": "select",
+    "section": "general",
+    "options": ["nail_salon", "waxing_studio", "skin_therapy", "lash_studio"],
+    "default": "nail_salon"
+  },
+  {
+    "key": "logoUrl",
+    "label": "Logo URL",
+    "type": "image",
+    "section": "branding"
+  },
+  {
+    "key": "primaryColor",
+    "label": "Hoofdkleur",
+    "type": "color",
+    "section": "branding",
+    "default": "#c97d7d"
+  },
+  {
+    "key": "primaryColorDark",
+    "label": "Hoofdkleur Donker",
+    "type": "color",
+    "section": "branding",
+    "default": "#a85c5c"
+  },
+  {
+    "key": "primaryColorLight",
+    "label": "Hoofdkleur Licht",
+    "type": "color",
+    "section": "branding",
+    "default": "#e8a5a5"
+  },
+  {
+    "key": "primarySoft",
+    "label": "Hoofdkleur Zacht (achtergrond)",
+    "type": "color",
+    "section": "branding",
+    "default": "#fdf0f0"
+  },
+  {
+    "key": "accentColor",
+    "label": "Accent Kleur",
+    "type": "color",
+    "section": "branding",
+    "default": "#d4a574"
+  },
+  {
+    "key": "bgSoft",
+    "label": "Zachte Achtergrondkleur",
+    "type": "color",
+    "section": "branding",
+    "default": "#fdf5f3"
+  },
+  {
+    "key": "heroBadge",
+    "label": "Hero Badge Tekst",
+    "type": "text",
+    "section": "hero",
+    "default": "Welkom"
+  },
+  {
+    "key": "heroBadgeIcon",
+    "label": "Hero Badge Icoon",
+    "type": "select",
+    "section": "hero",
+    "options": ["✨", "💅", "🌸", "💆", "👁️", "🌿", "💎", "🌟"],
+    "default": "✨"
+  },
+  {
+    "key": "heading",
+    "label": "Hero Titel (NL)",
+    "type": "text",
+    "section": "hero"
+  },
+  {
+    "key": "heading_en",
+    "label": "Hero Titel (EN)",
+    "type": "text",
+    "section": "hero"
+  },
+  {
+    "key": "tagline",
+    "label": "Hero Ondertitel (NL)",
+    "type": "textarea",
+    "section": "hero"
+  },
+  {
+    "key": "tagline_en",
+    "label": "Hero Ondertitel (EN)",
+    "type": "textarea",
+    "section": "hero"
+  },
+  {
+    "key": "heroImage",
+    "label": "Hero Foto",
+    "type": "image",
+    "section": "hero"
+  },
+  {
+    "key": "usps",
+    "label": "USP's (voordelen balk)",
+    "type": "array",
+    "section": "hero",
+    "fields": [
+      { "key": "icon", "label": "Icoon", "type": "select", "options": ["✨", "💅", "🌸", "💆", "⭐", "🌿", "💎", "❤️", "🏆", "✅", "🧴", "👁️"] },
+      { "key": "text", "label": "Tekst (NL)", "type": "text" },
+      { "key": "text_en", "label": "Tekst (EN)", "type": "text" }
+    ]
+  },
+  {
+    "key": "servicesTitle",
+    "label": "Behandelingen Titel (NL)",
+    "type": "text",
+    "section": "services",
+    "default": "Onze Behandelingen"
+  },
+  {
+    "key": "servicesTitle_en",
+    "label": "Behandelingen Titel (EN)",
+    "type": "text",
+    "section": "services",
+    "default": "Our Treatments"
+  },
+  {
+    "key": "servicesSubtitle",
+    "label": "Behandelingen Ondertitel (NL)",
+    "type": "textarea",
+    "section": "services"
+  },
+  {
+    "key": "servicesSubtitle_en",
+    "label": "Behandelingen Ondertitel (EN)",
+    "type": "textarea",
+    "section": "services"
+  },
+  {
+    "key": "treatments",
+    "label": "Behandelingen",
+    "type": "array",
+    "section": "services",
+    "fields": [
+      { "key": "name", "label": "Naam (NL)", "type": "text" },
+      { "key": "name_en", "label": "Naam (EN)", "type": "text" },
+      { "key": "description", "label": "Beschrijving (NL)", "type": "textarea" },
+      { "key": "description_en", "label": "Beschrijving (EN)", "type": "textarea" },
+      { "key": "price", "label": "Prijs", "type": "text" },
+      { "key": "duration", "label": "Duur", "type": "text" },
+      { "key": "image", "label": "Foto", "type": "image" }
+    ]
+  },
+  {
+    "key": "aboutImage",
+    "label": "Over Ons Foto",
+    "type": "image",
+    "section": "about"
+  },
+  {
+    "key": "aboutTitle",
+    "label": "Over Ons Titel (NL)",
+    "type": "text",
+    "section": "about"
+  },
+  {
+    "key": "aboutTitle_en",
+    "label": "Over Ons Titel (EN)",
+    "type": "text",
+    "section": "about"
+  },
+  {
+    "key": "aboutIntro",
+    "label": "Over Ons Intro (NL)",
+    "type": "textarea",
+    "section": "about"
+  },
+  {
+    "key": "aboutIntro_en",
+    "label": "Over Ons Intro (EN)",
+    "type": "textarea",
+    "section": "about"
+  },
+  {
+    "key": "aboutBody",
+    "label": "Over Ons Tekst (NL)",
+    "type": "textarea",
+    "section": "about"
+  },
+  {
+    "key": "aboutBody_en",
+    "label": "Over Ons Tekst (EN)",
+    "type": "textarea",
+    "section": "about"
+  },
+  {
+    "key": "aboutFeatures",
+    "label": "Over Ons Kenmerken",
+    "type": "array",
+    "section": "about",
+    "fields": [
+      { "key": "text", "label": "Tekst (NL)", "type": "text" },
+      { "key": "text_en", "label": "Tekst (EN)", "type": "text" }
+    ]
+  },
+  {
+    "key": "showPricing",
+    "label": "Toon Prijslijst",
+    "type": "toggle",
+    "section": "pricing",
+    "default": true
+  },
+  {
+    "key": "pricingTitle",
+    "label": "Prijslijst Titel (NL)",
+    "type": "text",
+    "section": "pricing",
+    "default": "Onze Prijzen"
+  },
+  {
+    "key": "pricingTitle_en",
+    "label": "Prijslijst Titel (EN)",
+    "type": "text",
+    "section": "pricing",
+    "default": "Our Prices"
+  },
+  {
+    "key": "pricingItems",
+    "label": "Prijslijst Items",
+    "type": "array",
+    "section": "pricing",
+    "fields": [
+      { "key": "icon", "label": "Icoon", "type": "select", "options": ["💅", "✨", "💆", "🌸", "👁️", "🧴", "💎", "🌿", "❤️", "🔥"] },
+      { "key": "name", "label": "Naam (NL)", "type": "text" },
+      { "key": "name_en", "label": "Naam (EN)", "type": "text" },
+      { "key": "description", "label": "Omschrijving (NL)", "type": "text" },
+      { "key": "description_en", "label": "Omschrijving (EN)", "type": "text" },
+      { "key": "price", "label": "Prijs", "type": "text" }
+    ]
+  },
+  {
+    "key": "showGallery",
+    "label": "Toon Galerij",
+    "type": "toggle",
+    "section": "gallery",
+    "default": true
+  },
+  {
+    "key": "gallery",
+    "label": "Galerij Foto's",
+    "type": "array",
+    "section": "gallery",
+    "fields": [
+      { "key": "src", "label": "Foto URL", "type": "image" },
+      { "key": "alt", "label": "Beschrijving", "type": "text" }
+    ]
+  },
+  {
+    "key": "showReviews",
+    "label": "Toon Reviews",
+    "type": "toggle",
+    "section": "reviews",
+    "default": true
+  },
+  {
+    "key": "reviewScore",
+    "label": "Review Score",
+    "type": "text",
+    "section": "reviews"
+  },
+  {
+    "key": "reviewCount",
+    "label": "Aantal Reviews",
+    "type": "text",
+    "section": "reviews"
+  },
+  {
+    "key": "reviews",
+    "label": "Reviews",
+    "type": "array",
+    "section": "reviews",
+    "fields": [
+      { "key": "name", "label": "Naam", "type": "text" },
+      { "key": "initial", "label": "Initiaal", "type": "text" },
+      { "key": "text", "label": "Review Tekst", "type": "textarea" }
+    ]
+  },
+  {
+    "key": "hours",
+    "label": "Openingstijden",
+    "type": "array",
+    "section": "hours",
+    "fields": [
+      { "key": "day", "label": "Dag", "type": "text" },
+      { "key": "time", "label": "Tijd", "type": "text" }
+    ]
+  },
+  {
+    "key": "ctaTitle",
+    "label": "CTA Titel (NL)",
+    "type": "text",
+    "section": "cta",
+    "default": "Klaar voor uw afspraak?"
+  },
+  {
+    "key": "ctaTitle_en",
+    "label": "CTA Titel (EN)",
+    "type": "text",
+    "section": "cta",
+    "default": "Ready for your appointment?"
+  },
+  {
+    "key": "ctaText",
+    "label": "CTA Tekst (NL)",
+    "type": "textarea",
+    "section": "cta",
+    "default": "Boek eenvoudig online en geniet van professionele service."
+  },
+  {
+    "key": "ctaText_en",
+    "label": "CTA Tekst (EN)",
+    "type": "textarea",
+    "section": "cta",
+    "default": "Book easily online and enjoy professional service."
+  },
+  {
+    "key": "phone",
+    "label": "Telefoonnummer",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "phoneHref",
+    "label": "Telefoon Link",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "email",
+    "label": "E-mail",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "emailHref",
+    "label": "E-mail Link",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "address",
+    "label": "Adres",
+    "type": "text",
+    "section": "contact"
+  },
+  {
+    "key": "mapsUrl",
+    "label": "Google Maps Link",
+    "type": "url",
+    "section": "contact"
+  },
+  {
+    "key": "instagramUrl",
+    "label": "Instagram URL",
+    "type": "url",
+    "section": "social"
+  },
+  {
+    "key": "facebookUrl",
+    "label": "Facebook URL",
+    "type": "url",
+    "section": "social"
+  },
+  {
+    "key": "copyrightText",
+    "label": "Copyright Tekst",
+    "type": "text",
+    "section": "footer"
+  },
+  {
+    "key": "bookingUrl",
+    "label": "Booking URL",
+    "type": "url",
+    "section": "booking",
+    "required": false
+  }
+]
