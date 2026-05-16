@@ -815,7 +815,7 @@
           <button class="lang-btn active" data-lang="nl" onclick="setLang('nl')">NL</button>
           <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
         </div>
-        <a href="#boek" class="btn btn-primary btn-sm">
+        <a href="booking.html" class="btn btn-primary btn-sm">
           <span data-lang-nl>Boek nu</span>
           <span data-lang-en>Book now</span>
         </a>
@@ -837,7 +837,7 @@
           <span data-lang-en>Professional nail treatments in a relaxing atmosphere. From classic manicures to the latest nail art trends.</span>
         </p>
         <div class="hero-buttons">
-          <a href="#boek" class="btn btn-primary">
+          <a href="booking.html" class="btn btn-primary">
             <span data-lang-nl>Afspraak Maken</span>
             <span data-lang-en>Book Appointment</span>
           </a>
@@ -1020,7 +1020,7 @@
       </div>
 
       <div style="text-align:center;margin-top:40px;">
-        <a href="#boek" class="btn btn-primary">
+        <a href="booking.html" class="btn btn-primary">
           <span data-lang-nl>Bekijk Alle Behandelingen</span>
           <span data-lang-en>View All Treatments</span>
         </a>
@@ -1066,7 +1066,7 @@
               <span data-lang-en>Relaxing and welcoming atmosphere</span>
             </li>
           </ul>
-          <a href="#boek" class="btn btn-soft">
+          <a href="booking.html" class="btn btn-soft">
             <span data-lang-nl>Maak een Afspraak</span>
             <span data-lang-en>Make an Appointment</span>
           </a>
@@ -1151,7 +1151,7 @@
         </div>
       </div>
       <div style="text-align:center;margin-top:40px;">
-        <a href="#boek" class="btn btn-primary">
+        <a href="booking.html" class="btn btn-primary">
           <span data-lang-nl>Boek nu</span>
           <span data-lang-en>Book now</span>
         </a>
@@ -1323,98 +1323,10 @@
       <span data-lang-nl>Boek eenvoudig online en geniet van professionele service.</span>
       <span data-lang-en>Book easily online and enjoy professional service.</span>
     </p>
-    <a href="#boek" class="btn">
+    <a href="booking.html" class="btn">
       <span data-lang-nl>Afspraak Maken</span>
       <span data-lang-en>Book Appointment</span>
     </a>
-  </section>
-
-  <!-- Booking Section -->
-  <section class="section section-warm" id="boek">
-    <div class="container" style="max-width:560px;">
-      <div class="section-header">
-        <span class="section-label">
-          <span data-lang-nl>Boek Online</span>
-          <span data-lang-en>Book Online</span>
-        </span>
-        <h2>
-          <span data-lang-nl>Maak Uw Afspraak</span>
-          <span data-lang-en>Make Your Appointment</span>
-        </h2>
-        <p>
-          <span data-lang-nl>Vul het formulier in en wij bevestigen uw afspraak zo snel mogelijk.</span>
-          <span data-lang-en>Fill in the form and we'll confirm your appointment as soon as possible.</span>
-        </p>
-      </div>
-      <form id="bookingForm" onsubmit="return submitBookingForm(event)" style="background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.06);border:1px solid #f0ebe6;display:flex;flex-direction:column;gap:16px;">
-        <div>
-          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
-            <span data-lang-nl>Naam</span><span data-lang-en>Name</span>
-          </label>
-          <input type="text" required placeholder="Uw naam" style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-        </div>
-        <div>
-          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
-            <span data-lang-nl>Telefoon</span><span data-lang-en>Phone</span>
-          </label>
-          <input type="tel" required placeholder="+31 6 ..." style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-        </div>
-        <div>
-          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
-            <span data-lang-nl>Behandeling</span><span data-lang-en>Treatment</span>
-          </label>
-          <select required style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;background:#fff;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-            <option value="" disabled selected>Kies een behandeling...</option>
-            <option>Manicure – €25</option>
-            <option>Gellak – €35</option>
-            <option>Acrylnagels – €55</option>
-            <option>Spa Pedicure – €45</option>
-            <option>Nail Art – v.a. €5</option>
-            <option>BIAB / Builder Gel – €45</option>
-          </select>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div>
-            <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
-              <span data-lang-nl>Datum</span><span data-lang-en>Date</span>
-            </label>
-            <input type="date" required style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-          </div>
-          <div>
-            <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
-              <span data-lang-nl>Tijd</span><span data-lang-en>Time</span>
-            </label>
-            <input type="time" required style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-          </div>
-        </div>
-        <div>
-          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
-            <span data-lang-nl>Opmerkingen (optioneel)</span><span data-lang-en>Notes (optional)</span>
-          </label>
-          <textarea rows="3" placeholder="..." style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;resize:vertical;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'"></textarea>
-        </div>
-        <button type="submit" style="width:100%;padding:16px;background:#c97d7d;color:#fff;border:none;border-radius:50px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;margin-top:8px;letter-spacing:0.3px;">
-          <span data-lang-nl>Bevestig Afspraak</span>
-          <span data-lang-en>Confirm Appointment</span>
-        </button>
-        <p style="text-align:center;margin-top:4px;font-size:0.85rem;color:#999;">
-          <span data-lang-nl>Of bel direct: </span>
-          <span data-lang-en>Or call directly: </span>
-          <a href="tel:+31612345678" style="color:#c97d7d;font-weight:600;">+31 6 12345678</a>
-        </p>
-      </form>
-      <div id="bookingSuccess" style="display:none;background:#fff;border-radius:20px;padding:48px 32px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.06);border:1px solid #f0ebe6;">
-        <div style="font-size:3rem;color:#5cb85c;margin-bottom:16px;"><i class="fa-solid fa-circle-check"></i></div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:12px;">
-          <span data-lang-nl>Afspraak Aangevraagd!</span>
-          <span data-lang-en>Appointment Requested!</span>
-        </h3>
-        <p style="color:#6b6b6b;font-size:1rem;">
-          <span data-lang-nl>Wij nemen zo snel mogelijk contact met u op om uw afspraak te bevestigen.</span>
-          <span data-lang-en>We will contact you as soon as possible to confirm your appointment.</span>
-        </p>
-      </div>
-    </div>
   </section>
 
   <!-- Contact -->
@@ -1474,7 +1386,7 @@
       <span data-lang-nl>Bel Ons</span>
       <span data-lang-en>Call Us</span>
     </a>
-    <a href="#boek">
+    <a href="booking.html">
       <span data-lang-nl>Boek nu</span>
       <span data-lang-en>Book now</span>
     </a>
@@ -1522,19 +1434,6 @@
         });
       }
     })();
-
-    // Booking form submit
-    window.submitBookingForm = function(e) {
-      e.preventDefault();
-      var form = document.getElementById('bookingForm');
-      var success = document.getElementById('bookingSuccess');
-      if (form && success) {
-        form.style.display = 'none';
-        success.style.display = 'block';
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-      return false;
-    };
   </script>
 
 </body>
