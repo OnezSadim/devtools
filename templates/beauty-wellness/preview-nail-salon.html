@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe Nails Studio – Amsterdam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #c97d7d;
+      --primary-dark: #a85c5c;
+      --primary-light: #e8a5a5;
+      --primary-soft: #fdf0f0;
+      --accent: #d4a574;
+      --text: #2d2d2d;
+      --text-light: #6b6b6b;
+      --text-muted: #999;
+      --bg: #ffffff;
+      --bg-warm: #fdfbf9;
+      --bg-soft: #fdf5f3;
+      --border: #f0ebe6;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.06);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.08);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Typography ── */
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; }
+
+    /* ── Header ── */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: 68px;
+      display: flex;
+      align-items: center;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .header-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+    .header-logo img { height: 42px; object-fit: contain; }
+    .header-right { display: flex; align-items: center; gap: 16px; }
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      background: var(--bg-soft);
+      border-radius: 50px;
+      padding: 3px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 50px;
+      border: none;
+      background: transparent;
+      color: var(--text-light);
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .lang-btn.active {
+      background: var(--bg);
+      color: var(--text);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-body);
+      letter-spacing: 0.3px;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-soft {
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+    }
+    .btn-soft:hover {
+      background: var(--primary-light);
+      color: #fff;
+    }
+    .btn-sm { padding: 10px 22px; font-size: 0.85rem; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background: var(--bg-warm);
+      overflow: hidden;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    .hero-content { z-index: 2; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      color: var(--primary);
+      font-style: italic;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 32px;
+      max-width: 460px;
+      line-height: 1.7;
+    }
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-image {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      max-height: 600px;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+      pointer-events: none;
+    }
+    .hero-float {
+      position: absolute;
+      bottom: 32px;
+      left: -24px;
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 3;
+    }
+    .hero-float-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--primary-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .hero-float-text { font-size: 0.85rem; }
+    .hero-float-text strong { display: block; font-weight: 700; }
+    .hero-float-text span { color: var(--text-light); font-size: 0.8rem; }
+
+    /* ── USP Strip ── */
+    .usp-strip {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .usp-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .usp-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary-soft);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    /* ── Sections ── */
+    .section { padding: 80px 0; }
+    .section-warm { background: var(--bg-warm); }
+    .section-soft { background: var(--bg-soft); }
+    .section-dark { background: var(--text); color: #fff; }
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .section-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .section-dark .section-header p { color: rgba(255,255,255,0.7); }
+    .section-dark .section-label { color: var(--primary-light); }
+
+    /* ── Services / Treatments ── */
+    .treatments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .treatment-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+    .treatment-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .treatment-image {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: var(--bg-soft);
+    }
+    .treatment-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .treatment-card:hover .treatment-image img {
+      transform: scale(1.05);
+    }
+    .treatment-body { padding: 24px; }
+    .treatment-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    .treatment-body p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .treatment-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .treatment-price {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+    .treatment-duration {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ── Services List (compact) ── */
+    .services-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .service-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-row:last-child { border-bottom: none; }
+    .service-info { display: flex; align-items: center; gap: 16px; }
+    .service-icon-sm {
+      width: 44px;
+      height: 44px;
+      background: var(--primary-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .service-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+    .service-desc {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .service-price-tag {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      white-space: nowrap;
+    }
+
+    /* ── About Split ── */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-content h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      color: var(--text-light);
+      font-size: 1rem;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .about-features {
+      list-style: none;
+      margin: 24px 0 32px;
+    }
+    .about-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .about-features li::before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      background: var(--primary-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23c97d7d'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+      background-size: 14px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* ── Gallery ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .gallery-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 60%, rgba(0,0,0,0.3));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    /* ── Reviews ── */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .review-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .review-card::before {
+      content: '\201C';
+      font-family: var(--font-display);
+      font-size: 4rem;
+      color: var(--primary-light);
+      opacity: 0.3;
+      position: absolute;
+      top: 12px;
+      left: 24px;
+      line-height: 1;
+    }
+    .review-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 16px;
+    }
+    .review-star {
+      color: #f5c518;
+      font-size: 0.95rem;
+    }
+    .review-text {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+    }
+    .review-author-info { font-size: 0.9rem; }
+    .review-author-info strong { display: block; font-weight: 600; }
+    .review-author-info span { color: var(--text-muted); font-size: 0.82rem; }
+
+    /* ── Rating Badge ── */
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg);
+      padding: 8px 16px;
+      border-radius: 50px;
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+    .rating-badge .stars { color: #f5c518; }
+
+    /* ── Hours ── */
+    .hours-card {
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { font-weight: 600; }
+    .hours-row .time { color: var(--text-light); }
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .contact-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .contact-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--primary-soft);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 16px;
+    }
+    .contact-card h3 {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    .contact-card a { color: var(--primary); font-weight: 600; }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 64px 24px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+    .cta-section h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .cta-section p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      margin-bottom: 28px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+    .cta-section .btn {
+      background: #fff;
+      color: var(--primary-dark);
+      position: relative;
+    }
+    .cta-section .btn:hover {
+      background: #f5f5f5;
+      transform: translateY(-2px);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: #1a1a1a;
+      color: rgba(255,255,255,0.5);
+      padding: 40px 24px 120px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    .footer a { color: var(--primary-light); }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+    .footer-social a:hover { background: var(--primary); }
+
+    /* ── Sticky Mobile Bar ── */
+    .mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--bg);
+      display: flex;
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    }
+    .mobile-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .mobile-bar a:first-child {
+      color: var(--text);
+      border-right: 1px solid var(--border);
+    }
+    .mobile-bar a:last-child {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ── Language System ── */
+    [data-lang-en] { display: none; }
+    [data-lang-nl] { display: inline; }
+    body.lang-en [data-lang-en] { display: inline; }
+    body.lang-en [data-lang-nl] { display: none; }
+    body.lang-en [data-lang-en].block,
+    [data-lang-nl].block { display: block; }
+    body.lang-en [data-lang-nl].block { display: none; }
+    body.lang-only-en [data-lang-en] { display: inline; }
+    body.lang-only-en [data-lang-nl] { display: none; }
+    body.lang-only-en [data-lang-en].block { display: block; }
+    body.lang-only-en [data-lang-nl].block { display: none; }
+    body.lang-only-nl [data-lang-en] { display: none; }
+    body.lang-only-nl [data-lang-nl] { display: inline; }
+    body.lang-only-nl [data-lang-en].block { display: none; }
+    body.lang-only-nl [data-lang-nl].block { display: block; }
+
+    .lang-switch-hide { display: none !important; }
+
+    /* ── Responsive ── */
+    @media (min-width: 768px) {
+      .mobile-bar { display: none; }
+      .footer { padding-bottom: 40px; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        min-height: auto;
+      }
+      .hero-image { max-height: 400px; aspect-ratio: 4/3; }
+      .hero-float { display: none; }
+      .about-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .section { padding: 56px 0; }
+      .treatments-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .gallery-grid { gap: 8px; }
+      .usp-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .usp-item { font-size: 0.82rem; justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <span class="header-logo">Luxe Nails Studio</span>
+      <div class="header-right">
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn active" data-lang="nl" onclick="setLang('nl')">NL</button>
+          <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="#boek" class="btn btn-primary btn-sm">
+          <span data-lang-nl>Boek nu</span>
+          <span data-lang-en>Book now</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">💅 Welkom</div>
+        <h1>
+          <span data-lang-nl>Perfecte Nagels, <em>Elke Keer</em></span>
+          <span data-lang-en>Perfect Nails, <em>Every Time</em></span>
+        </h1>
+        <p class="hero-subtitle">
+          <span data-lang-nl>Professionele nagelbehandelingen in een ontspannen sfeer. Van klassieke manicure tot de nieuwste nail art trends.</span>
+          <span data-lang-en>Professional nail treatments in a relaxing atmosphere. From classic manicures to the latest nail art trends.</span>
+        </p>
+        <div class="hero-buttons">
+          <a href="#boek" class="btn btn-primary">
+            <span data-lang-nl>Afspraak Maken</span>
+            <span data-lang-en>Book Appointment</span>
+          </a>
+          <a href="tel:+31612345678" class="btn btn-outline">
+            <span data-lang-nl>Bel Ons</span>
+            <span data-lang-en>Call Us</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800" alt="Luxe Nails Studio">
+        <div class="hero-float">
+          <div class="hero-float-icon">&#9733;</div>
+          <div class="hero-float-text">
+            <strong>4.9 / 5</strong>
+            <span>127 reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP Strip -->
+  <div class="usp-strip">
+    <div class="container">
+      <div class="usp-grid">
+        <div class="usp-item">
+          <div class="usp-icon">💅</div>
+          <span><span data-lang-nl>Professionele Producten</span><span data-lang-en>Professional Products</span></span>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">✨</div>
+          <span><span data-lang-nl>Hygiëne Gecertificeerd</span><span data-lang-en>Hygiene Certified</span></span>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">⭐</div>
+          <span><span data-lang-nl>5-Sterren Service</span><span data-lang-en>5-Star Service</span></span>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">❤️</div>
+          <span><span data-lang-nl>100% Tevredenheid</span><span data-lang-en>100% Satisfaction</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Treatments -->
+  <section class="section" id="behandelingen">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">
+          <span data-lang-nl>Behandelingen</span>
+          <span data-lang-en>Treatments</span>
+        </span>
+        <h2>
+          <span data-lang-nl>Onze Behandelingen</span>
+          <span data-lang-en>Our Treatments</span>
+        </h2>
+        <p>
+          <span data-lang-nl>Ontdek onze professionele nagelbehandelingen</span>
+          <span data-lang-en>Discover our professional nail treatments</span>
+        </p>
+      </div>
+
+      <div class="treatments-grid">
+        <div class="treatment-card">
+          <div class="treatment-image">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600" alt="Manicure" loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <h3>
+              <span data-lang-nl>Manicure</span>
+              <span data-lang-en>Manicure</span>
+            </h3>
+            <p>
+              <span data-lang-nl>Klassieke verzorging voor mooie handen en nagels</span>
+              <span data-lang-en>Classic care for beautiful hands and nails</span>
+            </p>
+            <div class="treatment-meta">
+              <span class="treatment-price">€25</span>
+              <span class="treatment-duration">&#9201; 30 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-image">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=600" alt="Gellak" loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <h3>
+              <span data-lang-nl>Gellak</span>
+              <span data-lang-en>Gel Polish</span>
+            </h3>
+            <p>
+              <span data-lang-nl>Langdurige kleur met hoogglans finish, tot 3 weken mooi</span>
+              <span data-lang-en>Long-lasting color with high-gloss finish, beautiful for up to 3 weeks</span>
+            </p>
+            <div class="treatment-meta">
+              <span class="treatment-price">€35</span>
+              <span class="treatment-duration">&#9201; 45 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-image">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600" alt="Acrylnagels" loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <h3>
+              <span data-lang-nl>Acrylnagels</span>
+              <span data-lang-en>Acrylic Nails</span>
+            </h3>
+            <p>
+              <span data-lang-nl>Sterke en mooie nagelverlenging met acryl</span>
+              <span data-lang-en>Strong and beautiful nail extensions with acrylic</span>
+            </p>
+            <div class="treatment-meta">
+              <span class="treatment-price">€55</span>
+              <span class="treatment-duration">&#9201; 75 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-image">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=600" alt="Spa Pedicure" loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <h3>
+              <span data-lang-nl>Spa Pedicure</span>
+              <span data-lang-en>Spa Pedicure</span>
+            </h3>
+            <p>
+              <span data-lang-nl>Luxe pedicure met scrub, masker en massage</span>
+              <span data-lang-en>Luxury pedicure with scrub, mask and massage</span>
+            </p>
+            <div class="treatment-meta">
+              <span class="treatment-price">€45</span>
+              <span class="treatment-duration">&#9201; 60 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-image">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600" alt="Nail Art" loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <h3>
+              <span data-lang-nl>Nail Art</span>
+              <span data-lang-en>Nail Art</span>
+            </h3>
+            <p>
+              <span data-lang-nl>Creatieve designs en decoraties naar wens</span>
+              <span data-lang-en>Creative designs and decorations to your liking</span>
+            </p>
+            <div class="treatment-meta">
+              <span class="treatment-price">v.a. €5</span>
+              <span class="treatment-duration">&#9201; 15+ min</span>
+            </div>
+          </div>
+        </div>
+        <div class="treatment-card">
+          <div class="treatment-image">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600" alt="BIAB / Builder Gel" loading="lazy">
+          </div>
+          <div class="treatment-body">
+            <h3>
+              <span data-lang-nl>BIAB / Builder Gel</span>
+              <span data-lang-en>BIAB / Builder Gel</span>
+            </h3>
+            <p>
+              <span data-lang-nl>Versterkende gel overlay voor natuurlijke nagels</span>
+              <span data-lang-en>Strengthening gel overlay for natural nails</span>
+            </p>
+            <div class="treatment-meta">
+              <span class="treatment-price">€45</span>
+              <span class="treatment-duration">&#9201; 60 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#boek" class="btn btn-primary">
+          <span data-lang-nl>Bekijk Alle Behandelingen</span>
+          <span data-lang-en>View All Treatments</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section-warm" id="over-ons">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" alt="Luxe Nails Studio" loading="lazy">
+        </div>
+        <div class="about-content">
+          <span class="section-label">
+            <span data-lang-nl>Over Ons</span>
+            <span data-lang-en>About Us</span>
+          </span>
+          <h2>
+            <span data-lang-nl>Uw Nagelsalon in Amsterdam</span>
+            <span data-lang-en>Your Nail Salon in Amsterdam</span>
+          </h2>
+          <p data-lang-nl class="block">Bij Luxe Nails Studio draait alles om vakmanschap en persoonlijke aandacht. Wij geloven dat mooie nagels beginnen bij gezonde nagels.</p>
+          <p data-lang-en class="block">At Luxe Nails Studio, everything revolves around craftsmanship and personal attention. We believe beautiful nails start with healthy nails.</p>
+          <p data-lang-nl class="block">Ons team van ervaren nagelstylisten staat klaar om u te verwennen met de beste behandelingen en producten.</p>
+          <p data-lang-en class="block">Our team of experienced nail stylists is ready to pamper you with the best treatments and products.</p>
+          <ul class="about-features">
+            <li>
+              <span data-lang-nl>Hoogwaardige producten van top merken</span>
+              <span data-lang-en>High-quality products from top brands</span>
+            </li>
+            <li>
+              <span data-lang-nl>Strenge hygiëne standaarden</span>
+              <span data-lang-en>Strict hygiene standards</span>
+            </li>
+            <li>
+              <span data-lang-nl>Persoonlijk advies voor elke klant</span>
+              <span data-lang-en>Personal advice for every client</span>
+            </li>
+            <li>
+              <span data-lang-nl>Ontspannen en gezellige sfeer</span>
+              <span data-lang-en>Relaxing and welcoming atmosphere</span>
+            </li>
+          </ul>
+          <a href="#boek" class="btn btn-soft">
+            <span data-lang-nl>Maak een Afspraak</span>
+            <span data-lang-en>Make an Appointment</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="prijzen">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">
+          <span data-lang-nl>Prijslijst</span>
+          <span data-lang-en>Price List</span>
+        </span>
+        <h2>
+          <span data-lang-nl>Onze Prijzen</span>
+          <span data-lang-en>Our Prices</span>
+        </h2>
+      </div>
+      <div class="services-list">
+        <div class="service-row">
+          <div class="service-info">
+            <div class="service-icon-sm">💅</div>
+            <div>
+              <div class="service-name"><span data-lang-nl>Manicure</span><span data-lang-en>Manicure</span></div>
+              <div class="service-desc"><span data-lang-nl>Klassieke verzorging voor mooie handen en nagels</span><span data-lang-en>Classic care for beautiful hands and nails</span></div>
+            </div>
+          </div>
+          <div class="service-price-tag">€25</div>
+        </div>
+        <div class="service-row">
+          <div class="service-info">
+            <div class="service-icon-sm">💅</div>
+            <div>
+              <div class="service-name"><span data-lang-nl>Gellak</span><span data-lang-en>Gel Polish</span></div>
+              <div class="service-desc"><span data-lang-nl>Langdurige kleur met hoogglans finish, tot 3 weken mooi</span><span data-lang-en>Long-lasting color with high-gloss finish, beautiful for up to 3 weeks</span></div>
+            </div>
+          </div>
+          <div class="service-price-tag">€35</div>
+        </div>
+        <div class="service-row">
+          <div class="service-info">
+            <div class="service-icon-sm">💅</div>
+            <div>
+              <div class="service-name"><span data-lang-nl>Acrylnagels</span><span data-lang-en>Acrylic Nails</span></div>
+              <div class="service-desc"><span data-lang-nl>Sterke en mooie nagelverlenging met acryl</span><span data-lang-en>Strong and beautiful nail extensions with acrylic</span></div>
+            </div>
+          </div>
+          <div class="service-price-tag">€55</div>
+        </div>
+        <div class="service-row">
+          <div class="service-info">
+            <div class="service-icon-sm">💅</div>
+            <div>
+              <div class="service-name"><span data-lang-nl>Spa Pedicure</span><span data-lang-en>Spa Pedicure</span></div>
+              <div class="service-desc"><span data-lang-nl>Luxe pedicure met scrub, masker en massage</span><span data-lang-en>Luxury pedicure with scrub, mask and massage</span></div>
+            </div>
+          </div>
+          <div class="service-price-tag">€45</div>
+        </div>
+        <div class="service-row">
+          <div class="service-info">
+            <div class="service-icon-sm">💅</div>
+            <div>
+              <div class="service-name"><span data-lang-nl>Nail Art</span><span data-lang-en>Nail Art</span></div>
+              <div class="service-desc"><span data-lang-nl>Creatieve designs en decoraties naar wens</span><span data-lang-en>Creative designs and decorations to your liking</span></div>
+            </div>
+          </div>
+          <div class="service-price-tag">v.a. €5</div>
+        </div>
+        <div class="service-row">
+          <div class="service-info">
+            <div class="service-icon-sm">💅</div>
+            <div>
+              <div class="service-name"><span data-lang-nl>BIAB / Builder Gel</span><span data-lang-en>BIAB / Builder Gel</span></div>
+              <div class="service-desc"><span data-lang-nl>Versterkende gel overlay voor natuurlijke nagels</span><span data-lang-en>Strengthening gel overlay for natural nails</span></div>
+            </div>
+          </div>
+          <div class="service-price-tag">€45</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#boek" class="btn btn-primary">
+          <span data-lang-nl>Boek nu</span>
+          <span data-lang-en>Book now</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section section-warm" id="gallerij">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">
+          <span data-lang-nl>Portfolio</span>
+          <span data-lang-en>Portfolio</span>
+        </span>
+        <h2>
+          <span data-lang-nl>Ons Werk</span>
+          <span data-lang-en>Our Work</span>
+        </h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400" alt="Nail art gallery" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400" alt="Nail art gallery" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=400" alt="Nail art gallery" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=400" alt="Nail art gallery" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400" alt="Nail art gallery" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400" alt="Nail art gallery" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">
+          <span data-lang-nl>Beoordelingen</span>
+          <span data-lang-en>Reviews</span>
+        </span>
+        <h2>
+          <span data-lang-nl>Wat Klanten Zeggen</span>
+          <span data-lang-en>What Clients Say</span>
+        </h2>
+        <div class="rating-badge">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          4.9 / 5 &mdash; 127
+          <span data-lang-nl>beoordelingen</span>
+          <span data-lang-en>reviews</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+          </div>
+          <p class="review-text">"Altijd blij met mijn nagels hier! Professioneel en gezellig."</p>
+          <div class="review-author">
+            <div class="review-avatar">S</div>
+            <div class="review-author-info">
+              <strong>Sophie M.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+          </div>
+          <p class="review-text">"Beste nagelsalon in de buurt. Gellak houdt weken lang mooi."</p>
+          <div class="review-author">
+            <div class="review-avatar">L</div>
+            <div class="review-author-info">
+              <strong>Lisa de V.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+            <span class="review-star">&#9733;</span>
+          </div>
+          <p class="review-text">"Fantastische service en prachtig resultaat. Aanrader!"</p>
+          <div class="review-author">
+            <div class="review-avatar">E</div>
+            <div class="review-author-info">
+              <strong>Emma K.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours -->
+  <section class="section section-warm" id="openingstijden">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">
+          <span data-lang-nl>Openingstijden</span>
+          <span data-lang-en>Opening Hours</span>
+        </span>
+        <h2>
+          <span data-lang-nl>Wanneer Zijn Wij Open</span>
+          <span data-lang-en>When Are We Open</span>
+        </h2>
+      </div>
+      <div class="hours-card">
+        <div class="hours-row">
+          <span class="day">Maandag</span>
+          <span class="time">9:00 - 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Dinsdag</span>
+          <span class="time">9:00 - 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Woensdag</span>
+          <span class="time">9:00 - 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Donderdag</span>
+          <span class="time">9:00 - 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Vrijdag</span>
+          <span class="time">9:00 - 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Zaterdag</span>
+          <span class="time">9:00 - 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Zondag</span>
+          <span class="time">Gesloten</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>
+      <span data-lang-nl>Klaar voor uw afspraak?</span>
+      <span data-lang-en>Ready for your appointment?</span>
+    </h2>
+    <p>
+      <span data-lang-nl>Boek eenvoudig online en geniet van professionele service.</span>
+      <span data-lang-en>Book easily online and enjoy professional service.</span>
+    </p>
+    <a href="#boek" class="btn">
+      <span data-lang-nl>Afspraak Maken</span>
+      <span data-lang-en>Book Appointment</span>
+    </a>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Contact</span>
+        <h2>
+          <span data-lang-nl>Neem Contact Op</span>
+          <span data-lang-en>Get In Touch</span>
+        </h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">&#128205;</div>
+          <h3>
+            <span data-lang-nl>Adres</span>
+            <span data-lang-en>Address</span>
+          </h3>
+          <p>Keizersgracht 123, Amsterdam</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener">
+            <span data-lang-nl>Route plannen</span>
+            <span data-lang-en>Get directions</span>
+          </a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">&#128222;</div>
+          <h3>
+            <span data-lang-nl>Telefoon</span>
+            <span data-lang-en>Phone</span>
+          </h3>
+          <p><a href="tel:+31612345678">+31 6 12345678</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">&#9993;</div>
+          <h3>E-mail</h3>
+          <p><a href="mailto:info@luxenails.nl">info@luxenails.nl</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">Luxe Nails Studio</div>
+    <p>Keizersgracht 123, Amsterdam &middot; Amsterdam</p>
+    <div class="footer-social">
+      <a href="#" target="_blank" rel="noopener" aria-label="Instagram">&#9679;</a>
+    </div>
+    <p style="margin-top:16px;">&copy; 2025 Luxe Nails Studio</p>
+  </footer>
+
+  <!-- Sticky Mobile Bar -->
+  <div class="mobile-bar">
+    <a href="tel:+31612345678">
+      &#128222;
+      <span data-lang-nl>Bel Ons</span>
+      <span data-lang-en>Call Us</span>
+    </a>
+    <a href="#boek">
+      <span data-lang-nl>Boek nu</span>
+      <span data-lang-en>Book now</span>
+    </a>
+  </div>
+
+  <!-- Language & Config Script -->
+  <script>
+    (function() {
+      var config = {
+        defaultLanguage: 'nl',
+        languageMode: 'nl_en'
+      };
+
+      var langSwitch = document.getElementById('langSwitch');
+      var langBtns = langSwitch ? langSwitch.querySelectorAll('.lang-btn') : [];
+
+      if (config.languageMode === 'nl_only') {
+        document.body.classList.add('lang-only-nl');
+        if (langSwitch) langSwitch.classList.add('lang-switch-hide');
+        return;
+      }
+      if (config.languageMode === 'en_only') {
+        document.body.classList.add('lang-only-en');
+        if (langSwitch) langSwitch.classList.add('lang-switch-hide');
+        return;
+      }
+
+      if (config.defaultLanguage === 'en') {
+        document.body.classList.add('lang-en');
+        updateBtns('en');
+      }
+
+      window.setLang = function(lang) {
+        if (lang === 'en') {
+          document.body.classList.add('lang-en');
+        } else {
+          document.body.classList.remove('lang-en');
+        }
+        updateBtns(lang);
+      };
+
+      function updateBtns(active) {
+        langBtns.forEach(function(btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === active);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
