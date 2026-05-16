@@ -1329,6 +1329,94 @@
     </a>
   </section>
 
+  <!-- Booking Section -->
+  <section class="section section-warm" id="boek">
+    <div class="container" style="max-width:560px;">
+      <div class="section-header">
+        <span class="section-label">
+          <span data-lang-nl>Boek Online</span>
+          <span data-lang-en>Book Online</span>
+        </span>
+        <h2>
+          <span data-lang-nl>Maak Uw Afspraak</span>
+          <span data-lang-en>Make Your Appointment</span>
+        </h2>
+        <p>
+          <span data-lang-nl>Vul het formulier in en wij bevestigen uw afspraak zo snel mogelijk.</span>
+          <span data-lang-en>Fill in the form and we'll confirm your appointment as soon as possible.</span>
+        </p>
+      </div>
+      <form id="bookingForm" onsubmit="return submitBookingForm(event)" style="background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.06);border:1px solid #f0ebe6;display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
+            <span data-lang-nl>Naam</span><span data-lang-en>Name</span>
+          </label>
+          <input type="text" required placeholder="Uw naam" style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
+        </div>
+        <div>
+          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
+            <span data-lang-nl>Telefoon</span><span data-lang-en>Phone</span>
+          </label>
+          <input type="tel" required placeholder="+31 6 ..." style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
+        </div>
+        <div>
+          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
+            <span data-lang-nl>Behandeling</span><span data-lang-en>Treatment</span>
+          </label>
+          <select required style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;background:#fff;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
+            <option value="" disabled selected>Kies een behandeling...</option>
+            <option>Manicure – €25</option>
+            <option>Gellak – €35</option>
+            <option>Acrylnagels – €55</option>
+            <option>Spa Pedicure – €45</option>
+            <option>Nail Art – v.a. €5</option>
+            <option>BIAB / Builder Gel – €45</option>
+          </select>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div>
+            <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
+              <span data-lang-nl>Datum</span><span data-lang-en>Date</span>
+            </label>
+            <input type="date" required style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
+          </div>
+          <div>
+            <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
+              <span data-lang-nl>Tijd</span><span data-lang-en>Time</span>
+            </label>
+            <input type="time" required style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
+          </div>
+        </div>
+        <div>
+          <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">
+            <span data-lang-nl>Opmerkingen (optioneel)</span><span data-lang-en>Notes (optional)</span>
+          </label>
+          <textarea rows="3" placeholder="..." style="width:100%;padding:14px 16px;border:1.5px solid #f0ebe6;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;resize:vertical;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'"></textarea>
+        </div>
+        <button type="submit" style="width:100%;padding:16px;background:#c97d7d;color:#fff;border:none;border-radius:50px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;margin-top:8px;letter-spacing:0.3px;">
+          <span data-lang-nl>Bevestig Afspraak</span>
+          <span data-lang-en>Confirm Appointment</span>
+        </button>
+        <p style="text-align:center;margin-top:4px;font-size:0.85rem;color:#999;">
+          <span data-lang-nl>Of bel direct: </span>
+          <span data-lang-en>Or call directly: </span>
+          <a href="tel:+31612345678" style="color:#c97d7d;font-weight:600;">+31 6 12345678</a>
+        </p>
+      </form>
+      <div id="bookingSuccess" style="display:none;background:#fff;border-radius:20px;padding:48px 32px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.06);border:1px solid #f0ebe6;">
+        <div style="font-size:3rem;color:#5cb85c;margin-bottom:16px;"><i class="fa-solid fa-circle-check"></i></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:12px;">
+          <span data-lang-nl>Afspraak Aangevraagd!</span>
+          <span data-lang-en>Appointment Requested!</span>
+        </h3>
+        <p style="color:#6b6b6b;font-size:1rem;">
+          <span data-lang-nl>Wij nemen zo snel mogelijk contact met u op om uw afspraak te bevestigen.</span>
+          <span data-lang-en>We will contact you as soon as possible to confirm your appointment.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="section" id="contact">
     <div class="container">
@@ -1392,83 +1480,6 @@
     </a>
   </div>
 
-  <!-- Booking Modal -->
-  <div id="bookingModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:center;justify-content:center;">
-    <div style="background:#fff;border-radius:20px;max-width:440px;width:90%;margin:auto;padding:36px 28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);max-height:90vh;overflow-y:auto;">
-      <button onclick="closeBooking()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#999;line-height:1;">&times;</button>
-      <div style="text-align:center;margin-bottom:24px;">
-        <div style="width:56px;height:56px;background:#fdf0f0;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#c97d7d;margin:0 auto 16px;"><i class="fa-solid fa-calendar-check"></i></div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:4px;">
-          <span data-lang-nl>Afspraak Maken</span>
-          <span data-lang-en>Book Appointment</span>
-        </h3>
-        <p style="color:#6b6b6b;font-size:0.9rem;">
-          <span data-lang-nl>Vul uw gegevens in en wij nemen contact op.</span>
-          <span data-lang-en>Fill in your details and we'll get in touch.</span>
-        </p>
-      </div>
-      <form onsubmit="submitBooking(event)" style="display:flex;flex-direction:column;gap:14px;">
-        <div>
-          <label style="font-size:0.82rem;font-weight:600;display:block;margin-bottom:4px;">
-            <span data-lang-nl>Naam</span><span data-lang-en>Name</span>
-          </label>
-          <input type="text" required placeholder="Uw naam" style="width:100%;padding:12px 16px;border:1.5px solid #f0ebe6;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;transition:border 0.2s;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-        </div>
-        <div>
-          <label style="font-size:0.82rem;font-weight:600;display:block;margin-bottom:4px;">
-            <span data-lang-nl>Telefoon</span><span data-lang-en>Phone</span>
-          </label>
-          <input type="tel" required placeholder="+31 6 ..." style="width:100%;padding:12px 16px;border:1.5px solid #f0ebe6;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;transition:border 0.2s;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-        </div>
-        <div>
-          <label style="font-size:0.82rem;font-weight:600;display:block;margin-bottom:4px;">
-            <span data-lang-nl>Behandeling</span><span data-lang-en>Treatment</span>
-          </label>
-          <select required style="width:100%;padding:12px 16px;border:1.5px solid #f0ebe6;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;background:#fff;transition:border 0.2s;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-            <option value="" disabled selected>Kies een behandeling...</option>
-            <option>Manicure – €25</option>
-            <option>Gellak – €35</option>
-            <option>Acrylnagels – €55</option>
-            <option>Spa Pedicure – €45</option>
-            <option>Nail Art – v.a. €5</option>
-            <option>BIAB / Builder Gel – €45</option>
-          </select>
-        </div>
-        <div>
-          <label style="font-size:0.82rem;font-weight:600;display:block;margin-bottom:4px;">
-            <span data-lang-nl>Voorkeursdatum</span><span data-lang-en>Preferred Date</span>
-          </label>
-          <input type="date" required style="width:100%;padding:12px 16px;border:1.5px solid #f0ebe6;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;transition:border 0.2s;" onfocus="this.style.borderColor='#c97d7d'" onblur="this.style.borderColor='#f0ebe6'">
-        </div>
-        <button type="submit" style="width:100%;padding:14px;background:#c97d7d;color:#fff;border:none;border-radius:50px;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;margin-top:8px;transition:background 0.2s;">
-          <span data-lang-nl>Bevestig Afspraak</span>
-          <span data-lang-en>Confirm Appointment</span>
-        </button>
-      </form>
-      <p style="text-align:center;margin-top:16px;font-size:0.82rem;color:#999;">
-        <span data-lang-nl>Of bel direct: </span>
-        <span data-lang-en>Or call directly: </span>
-        <a href="tel:+31612345678" style="color:#c97d7d;font-weight:600;">+31 6 12345678</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- Booking Confirmation Modal -->
-  <div id="bookingConfirm" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:center;justify-content:center;">
-    <div style="background:#fff;border-radius:20px;max-width:380px;width:90%;margin:auto;padding:40px 28px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
-      <div style="font-size:2.5rem;margin-bottom:16px;color:#5cb85c;"><i class="fa-solid fa-circle-check"></i></div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:8px;">
-        <span data-lang-nl>Afspraak Aangevraagd!</span>
-        <span data-lang-en>Appointment Requested!</span>
-      </h3>
-      <p style="color:#6b6b6b;font-size:0.9rem;margin-bottom:24px;">
-        <span data-lang-nl>Wij nemen zo snel mogelijk contact met u op om uw afspraak te bevestigen.</span>
-        <span data-lang-en>We will contact you as soon as possible to confirm your appointment.</span>
-      </p>
-      <button onclick="closeConfirm()" style="padding:12px 32px;background:#c97d7d;color:#fff;border:none;border-radius:50px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;">OK</button>
-    </div>
-  </div>
-
   <!-- Language & Config Script -->
   <script>
     (function() {
@@ -1512,42 +1523,18 @@
       }
     })();
 
-    // Booking modal — separate self-executing block
-    (function() {
-      function openBooking(e) {
-        if (e) e.preventDefault();
-        var modal = document.getElementById('bookingModal');
-        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    // Booking form submit
+    window.submitBookingForm = function(e) {
+      e.preventDefault();
+      var form = document.getElementById('bookingForm');
+      var success = document.getElementById('bookingSuccess');
+      if (form && success) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-      function closeBooking() {
-        var modal = document.getElementById('bookingModal');
-        if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
-      }
-      window.closeBooking = closeBooking;
-      window.submitBooking = function(e) {
-        e.preventDefault();
-        closeBooking();
-        var confirm = document.getElementById('bookingConfirm');
-        if (confirm) { confirm.style.display = 'flex'; }
-      };
-      window.closeConfirm = function() {
-        var confirm = document.getElementById('bookingConfirm');
-        if (confirm) { confirm.style.display = 'none'; document.body.style.overflow = ''; }
-      };
-
-      document.querySelectorAll('a[href="#boek"]').forEach(function(link) {
-        link.addEventListener('click', openBooking);
-      });
-
-      var bookingModal = document.getElementById('bookingModal');
-      if (bookingModal) {
-        bookingModal.addEventListener('click', function(e) { if (e.target === this) closeBooking(); });
-      }
-      var confirmModal = document.getElementById('bookingConfirm');
-      if (confirmModal) {
-        confirmModal.addEventListener('click', function(e) { if (e.target === this) window.closeConfirm(); });
-      }
-    })();
+      return false;
+    };
   </script>
 
 </body>
