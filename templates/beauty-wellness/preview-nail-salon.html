@@ -827,7 +827,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-badge"><i class="fa-solid fa-sparkles"></i> Welkom</div>
+        <div class="hero-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Welkom</div>
         <h1>
           <span data-lang-nl>Perfecte Nagels, <em>Elke Keer</em></span>
           <span data-lang-en>Perfect Nails, <em>Every Time</em></span>
@@ -869,7 +869,7 @@
           <span><span data-lang-nl>Professionele Producten</span><span data-lang-en>Professional Products</span></span>
         </div>
         <div class="usp-item">
-          <div class="usp-icon"><i class="fa-solid fa-shield-check"></i></div>
+          <div class="usp-icon"><i class="fa-solid fa-shield-halved"></i></div>
           <span><span data-lang-nl>Hygiëne Gecertificeerd</span><span data-lang-en>Hygiene Certified</span></span>
         </div>
         <div class="usp-item">
@@ -1512,36 +1512,42 @@
       }
     })();
 
-    // Booking modal
-    function openBooking(e) {
-      if (e) e.preventDefault();
-      document.getElementById('bookingModal').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    function closeBooking() {
-      document.getElementById('bookingModal').style.display = 'none';
-      document.body.style.overflow = '';
-    }
-    function submitBooking(e) {
-      e.preventDefault();
-      closeBooking();
-      document.getElementById('bookingConfirm').style.display = 'flex';
-    }
-    function closeConfirm() {
-      document.getElementById('bookingConfirm').style.display = 'none';
-      document.body.style.overflow = '';
-    }
+    // Booking modal — separate self-executing block
+    (function() {
+      function openBooking(e) {
+        if (e) e.preventDefault();
+        var modal = document.getElementById('bookingModal');
+        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+      }
+      function closeBooking() {
+        var modal = document.getElementById('bookingModal');
+        if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
+      }
+      window.closeBooking = closeBooking;
+      window.submitBooking = function(e) {
+        e.preventDefault();
+        closeBooking();
+        var confirm = document.getElementById('bookingConfirm');
+        if (confirm) { confirm.style.display = 'flex'; }
+      };
+      window.closeConfirm = function() {
+        var confirm = document.getElementById('bookingConfirm');
+        if (confirm) { confirm.style.display = 'none'; document.body.style.overflow = ''; }
+      };
 
-    document.querySelectorAll('a[href="#boek"]').forEach(function(link) {
-      link.addEventListener('click', openBooking);
-    });
+      document.querySelectorAll('a[href="#boek"]').forEach(function(link) {
+        link.addEventListener('click', openBooking);
+      });
 
-    document.getElementById('bookingModal').addEventListener('click', function(e) {
-      if (e.target === this) closeBooking();
-    });
-    document.getElementById('bookingConfirm').addEventListener('click', function(e) {
-      if (e.target === this) closeConfirm();
-    });
+      var bookingModal = document.getElementById('bookingModal');
+      if (bookingModal) {
+        bookingModal.addEventListener('click', function(e) { if (e.target === this) closeBooking(); });
+      }
+      var confirmModal = document.getElementById('bookingConfirm');
+      if (confirmModal) {
+        confirmModal.addEventListener('click', function(e) { if (e.target === this) window.closeConfirm(); });
+      }
+    })();
   </script>
 
 </body>
