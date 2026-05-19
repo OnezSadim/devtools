@@ -339,7 +339,7 @@
 
   <header class="header">
     <div class="header-inner">
-      <a href="/" class="header-back">
+      <a href="./" data-nav="home" class="header-back">
         <i class="fa-solid fa-arrow-left"></i>
         <span data-lang-nl>Terug</span>
         <span data-lang-en>Back</span>
@@ -469,7 +469,7 @@
         <span data-lang-en>We will contact you as soon as possible to confirm your appointment.</span>
       </p>
       <div class="success-details" id="successDetails"></div>
-      <a href="/" class="btn-back">
+      <a href="./" data-nav="home" class="btn-back">
         <i class="fa-solid fa-arrow-left"></i>
         <span data-lang-nl>Terug naar Home</span>
         <span data-lang-en>Back to Home</span>
@@ -564,5 +564,15 @@
     }
   </script>
 
+
+  <script>
+    (function rewriteHomeNav(){
+      var parts = location.pathname.split('/').filter(Boolean);
+      var slugRoot = parts.length ? '/' + parts[0] + '/' : '/';
+      document.querySelectorAll('[data-nav="home"]').forEach(function(el){
+        el.setAttribute('href', slugRoot);
+      });
+    })();
+  </script>
 </body>
 </html>
