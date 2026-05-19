@@ -6,7 +6,7 @@
       "primaryColorDark": "#a85c5c",
       "primaryColorLight": "#e8a5a5",
       "primarySoft": "#fdf0f0",
-      "accentColor": "#d4a574",
+      "accentColor": "#d4748a",
       "bgSoft": "#fdf5f3"
     },
     "heroBadge": "Welkom",
@@ -190,12 +190,12 @@
   "waxing_studio": {
     "label": "Waxing Studio",
     "colors": {
-      "primaryColor": "#d4a574",
-      "primaryColorDark": "#b8864e",
-      "primaryColorLight": "#e8c9a8",
-      "primarySoft": "#fdf6ef",
-      "accentColor": "#c97d7d",
-      "bgSoft": "#fdf8f3"
+      "primaryColor": "#c97d7d",
+      "primaryColorDark": "#a85c5c",
+      "primaryColorLight": "#e8a5a5",
+      "primarySoft": "#fdf0f0",
+      "accentColor": "#e8a5a5",
+      "bgSoft": "#fdf5f3"
     },
     "heroBadge": "Welkom",
     "heroBadgeIcon": "fa-solid fa-wand-magic-sparkles",
@@ -378,12 +378,12 @@
   "skin_therapy": {
     "label": "Huidtherapie",
     "colors": {
-      "primaryColor": "#7da89c",
-      "primaryColorDark": "#5c8578",
-      "primaryColorLight": "#a5c9be",
-      "primarySoft": "#f0f7f5",
-      "accentColor": "#d4a574",
-      "bgSoft": "#f5faf8"
+      "primaryColor": "#b88a8a",
+      "primaryColorDark": "#8d6363",
+      "primaryColorLight": "#dbb5b5",
+      "primarySoft": "#fdf0f0",
+      "accentColor": "#c97d7d",
+      "bgSoft": "#fdf5f3"
     },
     "heroBadge": "Welkom",
     "heroBadgeIcon": "fa-solid fa-leaf",
@@ -566,12 +566,12 @@
   "lash_studio": {
     "label": "Wimper Studio",
     "colors": {
-      "primaryColor": "#9c7daa",
-      "primaryColorDark": "#7b5c8a",
-      "primaryColorLight": "#c4a5cc",
-      "primarySoft": "#f5f0f7",
-      "accentColor": "#d4a574",
-      "bgSoft": "#f9f5fb"
+      "primaryColor": "#a85c5c",
+      "primaryColorDark": "#7d3f3f",
+      "primaryColorLight": "#c97d7d",
+      "primarySoft": "#fdf0f0",
+      "accentColor": "#d4748a",
+      "bgSoft": "#fdf5f3"
     },
     "heroBadge": "Welkom",
     "heroBadgeIcon": "fa-solid fa-eye",
