@@ -6,6 +6,7 @@
   <title>{{pageTitle}}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -829,7 +830,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-badge">{{raw:heroBadgeIcon}} {{heroBadge}}</div>
+        <div class="hero-badge"><i class="{{raw:heroBadgeIcon}}"></i> {{heroBadge}}</div>
         <h1>
           <span data-lang-nl>{{heading}}</span>
           <span data-lang-en>{{heading_en}}</span>
@@ -853,7 +854,7 @@
         <img src="{{raw:heroImage}}" alt="{{salonName}}">
         {{#if:showReviews}}
         <div class="hero-float">
-          <div class="hero-float-icon">&#9733;</div>
+          <div class="hero-float-icon"><i class="fa-solid fa-star" style="color:#f5c518;"></i></div>
           <div class="hero-float-text">
             <strong>{{reviewScore}} / 5</strong>
             <span>{{reviewCount}} reviews</span>
@@ -870,7 +871,7 @@
       <div class="usp-grid">
         {{#usps}}
         <div class="usp-item">
-          <div class="usp-icon">{{raw:icon}}</div>
+          <div class="usp-icon"><i class="{{raw:icon}}"></i></div>
           <span>
             <span data-lang-nl>{{text}}</span>
             <span data-lang-en>{{text_en}}</span>
@@ -916,7 +917,7 @@
             </p>
             <div class="treatment-meta">
               <span class="treatment-price">{{price}}</span>
-              <span class="treatment-duration">&#9201; {{duration}}</span>
+              <span class="treatment-duration"><i class="fa-regular fa-clock"></i> {{duration}}</span>
             </div>
           </div>
         </div>
@@ -987,7 +988,7 @@
         {{#pricingItems}}
         <div class="service-row">
           <div class="service-info">
-            <div class="service-icon-sm">{{raw:icon}}</div>
+            <div class="service-icon-sm"><i class="{{raw:icon}}"></i></div>
             <div>
               <div class="service-name">
                 <span data-lang-nl>{{name}}</span>
@@ -1052,7 +1053,7 @@
           <span data-lang-en>What Clients Say</span>
         </h2>
         <div class="rating-badge">
-          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
           {{reviewScore}} / 5 &mdash; {{reviewCount}}
           <span data-lang-nl>beoordelingen</span>
           <span data-lang-en>reviews</span>
@@ -1062,11 +1063,11 @@
         {{#reviews}}
         <div class="review-card">
           <div class="review-stars">
-            <span class="review-star">&#9733;</span>
-            <span class="review-star">&#9733;</span>
-            <span class="review-star">&#9733;</span>
-            <span class="review-star">&#9733;</span>
-            <span class="review-star">&#9733;</span>
+            <span class="review-star"><i class="fa-solid fa-star"></i></span>
+            <span class="review-star"><i class="fa-solid fa-star"></i></span>
+            <span class="review-star"><i class="fa-solid fa-star"></i></span>
+            <span class="review-star"><i class="fa-solid fa-star"></i></span>
+            <span class="review-star"><i class="fa-solid fa-star"></i></span>
           </div>
           <p class="review-text">"{{text}}"</p>
           <div class="review-author">
@@ -1134,7 +1135,7 @@
       </div>
       <div class="contact-grid">
         <div class="contact-card">
-          <div class="contact-icon">&#128205;</div>
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
           <h3>
             <span data-lang-nl>Adres</span>
             <span data-lang-en>Address</span>
@@ -1146,7 +1147,7 @@
           </a>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">&#128222;</div>
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
           <h3>
             <span data-lang-nl>Telefoon</span>
             <span data-lang-en>Phone</span>
@@ -1154,7 +1155,7 @@
           <p><a href="tel:{{raw:phoneHref}}">{{phone}}</a></p>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">&#9993;</div>
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
           <h3>E-mail</h3>
           <p><a href="mailto:{{raw:emailHref}}">{{email}}</a></p>
         </div>
@@ -1168,9 +1169,9 @@
     <p>{{address}} &middot; {{city}}</p>
     {{#if:instagramUrl}}
     <div class="footer-social">
-      <a href="{{raw:instagramUrl}}" target="_blank" rel="noopener" aria-label="Instagram">&#9679;</a>
+      <a href="{{raw:instagramUrl}}" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       {{#if:facebookUrl}}
-      <a href="{{raw:facebookUrl}}" target="_blank" rel="noopener" aria-label="Facebook">&#9679;</a>
+      <a href="{{raw:facebookUrl}}" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
       {{/if:facebookUrl}}
     </div>
     {{/if:instagramUrl}}
@@ -1180,7 +1181,7 @@
   <!-- Sticky Mobile Bar -->
   <div class="mobile-bar">
     <a href="tel:{{raw:phoneHref}}">
-      &#128222;
+      <i class="fa-solid fa-phone"></i>
       <span data-lang-nl>Bel Ons</span>
       <span data-lang-en>Call Us</span>
     </a>

@@ -100,11 +100,20 @@
   },
   {
     "key": "heroBadgeIcon",
-    "label": "Hero Badge Icoon",
+    "label": "Hero Badge Icoon (Font Awesome class)",
     "type": "select",
     "section": "hero",
-    "options": ["✨", "💅", "🌸", "💆", "👁️", "🌿", "💎", "🌟"],
-    "default": "✨"
+    "options": [
+      "fa-solid fa-wand-magic-sparkles",
+      "fa-solid fa-hand-sparkles",
+      "fa-solid fa-spa",
+      "fa-solid fa-leaf",
+      "fa-solid fa-gem",
+      "fa-solid fa-heart",
+      "fa-solid fa-star",
+      "fa-solid fa-crown"
+    ],
+    "default": "fa-solid fa-wand-magic-sparkles"
   },
   {
     "key": "heading",
@@ -142,7 +151,20 @@
     "type": "array",
     "section": "hero",
     "fields": [
-      { "key": "icon", "label": "Icoon", "type": "select", "options": ["✨", "💅", "🌸", "💆", "⭐", "🌿", "💎", "❤️", "🏆", "✅", "🧴", "👁️"] },
+      { "key": "icon", "label": "Icoon (FA class)", "type": "select", "options": [
+        "fa-solid fa-pump-soap",
+        "fa-solid fa-shield-halved",
+        "fa-solid fa-star",
+        "fa-solid fa-heart",
+        "fa-solid fa-spa",
+        "fa-solid fa-leaf",
+        "fa-solid fa-gem",
+        "fa-solid fa-award",
+        "fa-solid fa-check",
+        "fa-solid fa-hand-sparkles",
+        "fa-solid fa-flask",
+        "fa-solid fa-eye"
+      ] },
       { "key": "text", "label": "Tekst (NL)", "type": "text" },
       { "key": "text_en", "label": "Tekst (EN)", "type": "text" }
     ]
@@ -179,6 +201,20 @@
     "type": "array",
     "section": "services",
     "fields": [
+      { "key": "icon", "label": "Icoon (FA class)", "type": "select", "options": [
+        "fa-solid fa-hand-sparkles",
+        "fa-solid fa-droplet",
+        "fa-solid fa-gem",
+        "fa-solid fa-spa",
+        "fa-solid fa-palette",
+        "fa-solid fa-wand-magic-sparkles",
+        "fa-solid fa-leaf",
+        "fa-solid fa-eye",
+        "fa-solid fa-flask",
+        "fa-solid fa-feather",
+        "fa-solid fa-crown",
+        "fa-solid fa-heart"
+      ] },
       { "key": "name", "label": "Naam (NL)", "type": "text" },
       { "key": "name_en", "label": "Naam (EN)", "type": "text" },
       { "key": "description", "label": "Beschrijving (NL)", "type": "textarea" },
@@ -267,7 +303,18 @@
     "type": "array",
     "section": "pricing",
     "fields": [
-      { "key": "icon", "label": "Icoon", "type": "select", "options": ["💅", "✨", "💆", "🌸", "👁️", "🧴", "💎", "🌿", "❤️", "🔥"] },
+      { "key": "icon", "label": "Icoon (FA class)", "type": "select", "options": [
+        "fa-solid fa-hand-sparkles",
+        "fa-solid fa-droplet",
+        "fa-solid fa-gem",
+        "fa-solid fa-spa",
+        "fa-solid fa-palette",
+        "fa-solid fa-wand-magic-sparkles",
+        "fa-solid fa-leaf",
+        "fa-solid fa-eye",
+        "fa-solid fa-flask",
+        "fa-solid fa-heart"
+      ] },
       { "key": "name", "label": "Naam (NL)", "type": "text" },
       { "key": "name_en", "label": "Naam (EN)", "type": "text" },
       { "key": "description", "label": "Omschrijving (NL)", "type": "text" },
