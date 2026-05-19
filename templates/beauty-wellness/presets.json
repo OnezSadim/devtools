@@ -46,7 +46,9 @@
         "description": "Klassieke verzorging voor mooie handen en nagels",
         "description_en": "Classic care for beautiful hands and nails",
         "price": "€25",
-        "duration": "30 min"
+        "duration": "30 min",
+        "icon": "fa-solid fa-hand-sparkles",
+        "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80"
       },
       {
         "name": "Gellak",
@@ -54,7 +56,9 @@
         "description": "Langdurige kleur met hoogglans finish, tot 3 weken mooi",
         "description_en": "Long-lasting color with high-gloss finish, beautiful for up to 3 weeks",
         "price": "€35",
-        "duration": "45 min"
+        "duration": "45 min",
+        "icon": "fa-solid fa-gem",
+        "image": "https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=800&q=80"
       },
       {
         "name": "Acrylnagels",
@@ -62,7 +66,9 @@
         "description": "Sterke en mooie nagelverlenging met acryl",
         "description_en": "Strong and beautiful nail extensions with acrylic",
         "price": "€55",
-        "duration": "75 min"
+        "duration": "75 min",
+        "icon": "fa-solid fa-droplet",
+        "image": "https://images.unsplash.com/photo-1610992015734-2fc7d8b5b1f9?w=800&q=80"
       },
       {
         "name": "Spa Pedicure",
@@ -70,7 +76,9 @@
         "description": "Luxe pedicure met scrub, masker en massage",
         "description_en": "Luxury pedicure with scrub, mask and massage",
         "price": "€45",
-        "duration": "60 min"
+        "duration": "60 min",
+        "icon": "fa-solid fa-spa",
+        "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=800&q=80"
       },
       {
         "name": "Nail Art",
@@ -78,7 +86,9 @@
         "description": "Creatieve designs en decoraties naar wens",
         "description_en": "Creative designs and decorations to your liking",
         "price": "v.a. €5",
-        "duration": "15+ min"
+        "duration": "15+ min",
+        "icon": "fa-solid fa-palette",
+        "image": "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=800&q=80"
       },
       {
         "name": "BIAB / Builder Gel",
@@ -86,7 +96,9 @@
         "description": "Versterkende gel overlay voor natuurlijke nagels",
         "description_en": "Strengthening gel overlay for natural nails",
         "price": "€45",
-        "duration": "60 min"
+        "duration": "60 min",
+        "icon": "fa-solid fa-wand-magic-sparkles",
+        "image": "https://images.unsplash.com/photo-1604654894611-6973b376cbde?w=800&q=80"
       }
     ],
     "aboutFeatures": [
@@ -234,7 +246,9 @@
         "description": "Perfecte wenkbrauwvorm met warme wax",
         "description_en": "Perfect eyebrow shape with warm wax",
         "price": "€12",
-        "duration": "15 min"
+        "duration": "15 min",
+        "icon": "fa-solid fa-eye",
+        "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80"
       },
       {
         "name": "Bovenlip Wax",
@@ -242,7 +256,9 @@
         "description": "Snel en effectief, minimale irritatie",
         "description_en": "Quick and effective, minimal irritation",
         "price": "€8",
-        "duration": "10 min"
+        "duration": "10 min",
+        "icon": "fa-solid fa-leaf",
+        "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80"
       },
       {
         "name": "Volledige Benen",
@@ -250,7 +266,9 @@
         "description": "Langdurig gladde benen met warme wax",
         "description_en": "Long-lasting smooth legs with warm wax",
         "price": "€35",
-        "duration": "45 min"
+        "duration": "45 min",
+        "icon": "fa-solid fa-hand-sparkles",
+        "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80"
       },
       {
         "name": "Bikinilijn",
@@ -258,7 +276,9 @@
         "description": "Nette en verzorgde bikinilijn",
         "description_en": "Neat and groomed bikini line",
         "price": "€25",
-        "duration": "20 min"
+        "duration": "20 min",
+        "icon": "fa-solid fa-droplet",
+        "image": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&q=80"
       },
       {
         "name": "Brazilian Wax",
@@ -266,7 +286,9 @@
         "description": "Volledige ontharing met premium wax",
         "description_en": "Full hair removal with premium wax",
         "price": "€45",
-        "duration": "30 min"
+        "duration": "30 min",
+        "icon": "fa-solid fa-leaf",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"
       },
       {
         "name": "Oksels Wax",
@@ -274,7 +296,9 @@
         "description": "Snelle en effectieve ontharing",
         "description_en": "Quick and effective hair removal",
         "price": "€15",
-        "duration": "15 min"
+        "duration": "15 min",
+        "icon": "fa-solid fa-spa",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
       }
     ],
     "aboutFeatures": [
@@ -422,7 +446,9 @@
         "description": "Reiniging, peeling, masker en verzorging voor een frisse huid",
         "description_en": "Cleansing, peeling, mask and care for fresh skin",
         "price": "€55",
-        "duration": "60 min"
+        "duration": "60 min",
+        "icon": "fa-solid fa-spa",
+        "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80"
       },
       {
         "name": "Anti-Aging Behandeling",
@@ -430,7 +456,9 @@
         "description": "Intensieve behandeling tegen huidveroudering met premium serums",
         "description_en": "Intensive treatment against skin aging with premium serums",
         "price": "€85",
-        "duration": "75 min"
+        "duration": "75 min",
+        "icon": "fa-solid fa-droplet",
+        "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80"
       },
       {
         "name": "Chemische Peeling",
@@ -438,7 +466,9 @@
         "description": "Vernieuwt de huid en vermindert oneffenheden",
         "description_en": "Renews skin and reduces imperfections",
         "price": "€75",
-        "duration": "45 min"
+        "duration": "45 min",
+        "icon": "fa-solid fa-gem",
+        "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80"
       },
       {
         "name": "Microneedling",
@@ -446,7 +476,9 @@
         "description": "Stimuleert collageen voor een stevigere, gladdere huid",
         "description_en": "Stimulates collagen for firmer, smoother skin",
         "price": "€95",
-        "duration": "60 min"
+        "duration": "60 min",
+        "icon": "fa-solid fa-wand-magic-sparkles",
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80"
       },
       {
         "name": "Acne Behandeling",
@@ -454,7 +486,9 @@
         "description": "Doelgerichte behandeling voor een zuivere huid",
         "description_en": "Targeted treatment for clear skin",
         "price": "€65",
-        "duration": "60 min"
+        "duration": "60 min",
+        "icon": "fa-solid fa-leaf",
+        "image": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&q=80"
       },
       {
         "name": "Hydrafacial",
@@ -462,7 +496,9 @@
         "description": "Diepe reiniging en hydratatie in één behandeling",
         "description_en": "Deep cleansing and hydration in one treatment",
         "price": "€110",
-        "duration": "60 min"
+        "duration": "60 min",
+        "icon": "fa-solid fa-eye",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
       }
     ],
     "aboutFeatures": [
@@ -610,7 +646,9 @@
         "description": "Natuurlijke look met één extension per wimper",
         "description_en": "Natural look with one extension per lash",
         "price": "€75",
-        "duration": "90 min"
+        "duration": "90 min",
+        "icon": "fa-solid fa-feather",
+        "image": "https://images.unsplash.com/photo-1591360236480-9c6a3f6b1f4f?w=800&q=80"
       },
       {
         "name": "Volume Set",
@@ -618,7 +656,9 @@
         "description": "Voller en dramatischer effect met lichte fans",
         "description_en": "Fuller, more dramatic effect with light fans",
         "price": "€95",
-        "duration": "120 min"
+        "duration": "120 min",
+        "icon": "fa-solid fa-feather",
+        "image": "https://images.unsplash.com/photo-1583241800698-9c2e0fae07ef?w=800&q=80"
       },
       {
         "name": "Mega Volume",
@@ -626,7 +666,9 @@
         "description": "Maximaal volume voor een glamoureuze uitstraling",
         "description_en": "Maximum volume for a glamorous look",
         "price": "€115",
-        "duration": "150 min"
+        "duration": "150 min",
+        "icon": "fa-solid fa-gem",
+        "image": "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=800&q=80"
       },
       {
         "name": "Wimper Lift + Verf",
@@ -634,7 +676,9 @@
         "description": "Natuurlijke lift en kleur voor uw eigen wimpers",
         "description_en": "Natural lift and color for your own lashes",
         "price": "€45",
-        "duration": "45 min"
+        "duration": "45 min",
+        "icon": "fa-solid fa-eye",
+        "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80"
       },
       {
         "name": "Refill (2-3 weken)",
@@ -642,7 +686,9 @@
         "description": "Onderhoud om uw set fris en vol te houden",
         "description_en": "Maintenance to keep your set fresh and full",
         "price": "€45",
-        "duration": "60 min"
+        "duration": "60 min",
+        "icon": "fa-solid fa-leaf",
+        "image": "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800&q=80"
       },
       {
         "name": "Wimper Verwijdering",
@@ -650,7 +696,9 @@
         "description": "Veilige en zachte verwijdering van extensions",
         "description_en": "Safe and gentle removal of extensions",
         "price": "€15",
-        "duration": "20 min"
+        "duration": "20 min",
+        "icon": "fa-solid fa-feather",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
       }
     ],
     "aboutFeatures": [
