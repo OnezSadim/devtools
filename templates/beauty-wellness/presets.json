@@ -10,31 +10,31 @@
       "bgSoft": "#fdf5f3"
     },
     "heroBadge": "Welkom",
-    "heroBadgeIcon": "💅",
-    "heading": "Perfecte Nagels, <em>Elke Keer</em>",
-    "heading_en": "Perfect Nails, <em>Every Time</em>",
+    "heroBadgeIcon": "fa-solid fa-hand-sparkles",
+    "heading": "Perfecte Nagels, Elke Keer",
+    "heading_en": "Perfect Nails, Every Time",
     "tagline": "Professionele nagelbehandelingen in een ontspannen sfeer. Van klassieke manicure tot de nieuwste nail art trends.",
     "tagline_en": "Professional nail treatments in a relaxing atmosphere. From classic manicures to the latest nail art trends.",
     "servicesSubtitle": "Ontdek onze professionele nagelbehandelingen",
     "servicesSubtitle_en": "Discover our professional nail treatments",
     "usps": [
       {
-        "icon": "💅",
+        "icon": "fa-solid fa-hand-sparkles",
         "text": "Professionele Producten",
         "text_en": "Professional Products"
       },
       {
-        "icon": "✨",
+        "icon": "fa-solid fa-wand-magic-sparkles",
         "text": "Hygiëne Gecertificeerd",
         "text_en": "Hygiene Certified"
       },
       {
-        "icon": "⭐",
+        "icon": "fa-solid fa-star",
         "text": "5-Sterren Service",
         "text_en": "5-Star Service"
       },
       {
-        "icon": "❤️",
+        "icon": "fa-solid fa-heart",
         "text": "100% Tevredenheid",
         "text_en": "100% Satisfaction"
       }
@@ -159,7 +159,33 @@
     ],
     "pricingTitle": "Onze Prijzen",
     "pricingTitle_en": "Our Prices",
-    "showPricing": true
+    "showPricing": true,
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80",
+        "alt": "Manicure"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=1200&q=80",
+        "alt": "Gel nails"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=1200&q=80",
+        "alt": "Nail art"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=1200&q=80",
+        "alt": "Pedicure"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1610992015734-2fc7d8b5b1f9?w=1200&q=80",
+        "alt": "Polish"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1604654894611-6973b376cbde?w=1200&q=80",
+        "alt": "Studio"
+      }
+    ]
   },
   "waxing_studio": {
     "label": "Waxing Studio",
@@ -172,31 +198,31 @@
       "bgSoft": "#fdf8f3"
     },
     "heroBadge": "Welkom",
-    "heroBadgeIcon": "✨",
-    "heading": "Zijdezachte Huid, <em>Zonder Zorgen</em>",
-    "heading_en": "Silky Smooth Skin, <em>Without Worries</em>",
+    "heroBadgeIcon": "fa-solid fa-wand-magic-sparkles",
+    "heading": "Zijdezachte Huid, Zonder Zorgen",
+    "heading_en": "Silky Smooth Skin, Without Worries",
     "tagline": "Professionele waxbehandelingen voor langdurig gladde huid. Snel, effectief en met minimale irritatie.",
     "tagline_en": "Professional waxing treatments for long-lasting smooth skin. Fast, effective and with minimal irritation.",
     "servicesSubtitle": "Professionele waxbehandelingen voor elk lichaamsdeel",
     "servicesSubtitle_en": "Professional waxing treatments for every body part",
     "usps": [
       {
-        "icon": "✨",
+        "icon": "fa-solid fa-wand-magic-sparkles",
         "text": "Zijdezacht Resultaat",
         "text_en": "Silky Smooth Results"
       },
       {
-        "icon": "🌿",
+        "icon": "fa-solid fa-leaf",
         "text": "Natuurlijke Wax",
         "text_en": "Natural Wax"
       },
       {
-        "icon": "⭐",
+        "icon": "fa-solid fa-star",
         "text": "Ervaren Specialisten",
         "text_en": "Experienced Specialists"
       },
       {
-        "icon": "❤️",
+        "icon": "fa-solid fa-heart",
         "text": "Minimale Irritatie",
         "text_en": "Minimal Irritation"
       }
@@ -321,7 +347,33 @@
     ],
     "pricingTitle": "Onze Tarieven",
     "pricingTitle_en": "Our Rates",
-    "showPricing": true
+    "showPricing": true,
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80",
+        "alt": "Wax treatment"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=80",
+        "alt": "Brow wax"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=1200&q=80",
+        "alt": "Smooth skin"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&q=80",
+        "alt": "Studio"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+        "alt": "Care"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+        "alt": "Result"
+      }
+    ]
   },
   "skin_therapy": {
     "label": "Huidtherapie",
@@ -334,31 +386,31 @@
       "bgSoft": "#f5faf8"
     },
     "heroBadge": "Welkom",
-    "heroBadgeIcon": "🌿",
-    "heading": "Stralende Huid, <em>Natuurlijk Mooi</em>",
-    "heading_en": "Radiant Skin, <em>Naturally Beautiful</em>",
+    "heroBadgeIcon": "fa-solid fa-leaf",
+    "heading": "Stralende Huid, Natuurlijk Mooi",
+    "heading_en": "Radiant Skin, Naturally Beautiful",
     "tagline": "Professionele huidverzorging op maat. Van gezichtsbehandelingen tot huidanalyse — voor een gezonde, stralende huid.",
     "tagline_en": "Professional skincare tailored to you. From facials to skin analysis — for healthy, radiant skin.",
     "servicesSubtitle": "Professionele huidbehandelingen afgestemd op uw huid",
     "servicesSubtitle_en": "Professional skin treatments tailored to your skin",
     "usps": [
       {
-        "icon": "🌿",
+        "icon": "fa-solid fa-leaf",
         "text": "Natuurlijke Ingrediënten",
         "text_en": "Natural Ingredients"
       },
       {
-        "icon": "🔬",
+        "icon": "fa-solid fa-star",
         "text": "Huidanalyse",
         "text_en": "Skin Analysis"
       },
       {
-        "icon": "⭐",
+        "icon": "fa-solid fa-star",
         "text": "Gecertificeerde Specialisten",
         "text_en": "Certified Specialists"
       },
       {
-        "icon": "💎",
+        "icon": "fa-solid fa-gem",
         "text": "Premium Merken",
         "text_en": "Premium Brands"
       }
@@ -483,7 +535,33 @@
     ],
     "pricingTitle": "Behandelingstarieven",
     "pricingTitle_en": "Treatment Rates",
-    "showPricing": true
+    "showPricing": true,
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80",
+        "alt": "Facial"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&q=80",
+        "alt": "Skincare"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+        "alt": "Treatment"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=80",
+        "alt": "Beauty"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=1200&q=80",
+        "alt": "Glow"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+        "alt": "Result"
+      }
+    ]
   },
   "lash_studio": {
     "label": "Wimper Studio",
@@ -496,31 +574,31 @@
       "bgSoft": "#f9f5fb"
     },
     "heroBadge": "Welkom",
-    "heroBadgeIcon": "👁️",
-    "heading": "Betoverende Wimpers, <em>Moeiteloos Mooi</em>",
-    "heading_en": "Enchanting Lashes, <em>Effortlessly Beautiful</em>",
+    "heroBadgeIcon": "fa-solid fa-eye",
+    "heading": "Betoverende Wimpers, Moeiteloos Mooi",
+    "heading_en": "Enchanting Lashes, Effortlessly Beautiful",
     "tagline": "Professionele wimperextensions en behandelingen. Wake up with perfect lashes — elke dag.",
     "tagline_en": "Professional lash extensions and treatments. Wake up with perfect lashes — every day.",
     "servicesSubtitle": "Van natuurlijk tot dramatisch — wij hebben de perfecte set voor u",
     "servicesSubtitle_en": "From natural to dramatic — we have the perfect set for you",
     "usps": [
       {
-        "icon": "👁️",
+        "icon": "fa-solid fa-eye",
         "text": "Premium Wimpers",
         "text_en": "Premium Lashes"
       },
       {
-        "icon": "✨",
+        "icon": "fa-solid fa-wand-magic-sparkles",
         "text": "Lichtgewicht & Comfortabel",
         "text_en": "Lightweight & Comfortable"
       },
       {
-        "icon": "⭐",
+        "icon": "fa-solid fa-star",
         "text": "Gecertificeerde Stylisten",
         "text_en": "Certified Stylists"
       },
       {
-        "icon": "❤️",
+        "icon": "fa-solid fa-heart",
         "text": "Langdurig Resultaat",
         "text_en": "Long-Lasting Results"
       }
@@ -645,6 +723,32 @@
     ],
     "pricingTitle": "Onze Tarieven",
     "pricingTitle_en": "Our Rates",
-    "showPricing": true
+    "showPricing": true,
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1591360236480-9c6a3f6b1f4f?w=1200&q=80",
+        "alt": "Lashes"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1583241800698-9c2e0fae07ef?w=1200&q=80",
+        "alt": "Lash extension"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=1200&q=80",
+        "alt": "Volume lashes"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80",
+        "alt": "Lash lift"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=1200&q=80",
+        "alt": "Brow"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+        "alt": "Studio"
+      }
+    ]
   }
 }
