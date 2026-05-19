@@ -18,27 +18,149 @@
     "servicesSubtitle": "Ontdek onze professionele nagelbehandelingen",
     "servicesSubtitle_en": "Discover our professional nail treatments",
     "usps": [
-      { "icon": "💅", "text": "Professionele Producten", "text_en": "Professional Products" },
-      { "icon": "✨", "text": "Hygiëne Gecertificeerd", "text_en": "Hygiene Certified" },
-      { "icon": "⭐", "text": "5-Sterren Service", "text_en": "5-Star Service" },
-      { "icon": "❤️", "text": "100% Tevredenheid", "text_en": "100% Satisfaction" }
+      {
+        "icon": "💅",
+        "text": "Professionele Producten",
+        "text_en": "Professional Products"
+      },
+      {
+        "icon": "✨",
+        "text": "Hygiëne Gecertificeerd",
+        "text_en": "Hygiene Certified"
+      },
+      {
+        "icon": "⭐",
+        "text": "5-Sterren Service",
+        "text_en": "5-Star Service"
+      },
+      {
+        "icon": "❤️",
+        "text": "100% Tevredenheid",
+        "text_en": "100% Satisfaction"
+      }
     ],
     "treatments": [
-      { "name": "Manicure", "name_en": "Manicure", "description": "Klassieke verzorging voor mooie handen en nagels", "description_en": "Classic care for beautiful hands and nails", "price": "€25", "duration": "30 min" },
-      { "name": "Gellak", "name_en": "Gel Polish", "description": "Langdurige kleur met hoogglans finish, tot 3 weken mooi", "description_en": "Long-lasting color with high-gloss finish, beautiful for up to 3 weeks", "price": "€35", "duration": "45 min" },
-      { "name": "Acrylnagels", "name_en": "Acrylic Nails", "description": "Sterke en mooie nagelverlenging met acryl", "description_en": "Strong and beautiful nail extensions with acrylic", "price": "€55", "duration": "75 min" },
-      { "name": "Spa Pedicure", "name_en": "Spa Pedicure", "description": "Luxe pedicure met scrub, masker en massage", "description_en": "Luxury pedicure with scrub, mask and massage", "price": "€45", "duration": "60 min" },
-      { "name": "Nail Art", "name_en": "Nail Art", "description": "Creatieve designs en decoraties naar wens", "description_en": "Creative designs and decorations to your liking", "price": "v.a. €5", "duration": "15+ min" },
-      { "name": "BIAB / Builder Gel", "name_en": "BIAB / Builder Gel", "description": "Versterkende gel overlay voor natuurlijke nagels", "description_en": "Strengthening gel overlay for natural nails", "price": "€45", "duration": "60 min" }
+      {
+        "name": "Manicure",
+        "name_en": "Manicure",
+        "description": "Klassieke verzorging voor mooie handen en nagels",
+        "description_en": "Classic care for beautiful hands and nails",
+        "price": "€25",
+        "duration": "30 min"
+      },
+      {
+        "name": "Gellak",
+        "name_en": "Gel Polish",
+        "description": "Langdurige kleur met hoogglans finish, tot 3 weken mooi",
+        "description_en": "Long-lasting color with high-gloss finish, beautiful for up to 3 weeks",
+        "price": "€35",
+        "duration": "45 min"
+      },
+      {
+        "name": "Acrylnagels",
+        "name_en": "Acrylic Nails",
+        "description": "Sterke en mooie nagelverlenging met acryl",
+        "description_en": "Strong and beautiful nail extensions with acrylic",
+        "price": "€55",
+        "duration": "75 min"
+      },
+      {
+        "name": "Spa Pedicure",
+        "name_en": "Spa Pedicure",
+        "description": "Luxe pedicure met scrub, masker en massage",
+        "description_en": "Luxury pedicure with scrub, mask and massage",
+        "price": "€45",
+        "duration": "60 min"
+      },
+      {
+        "name": "Nail Art",
+        "name_en": "Nail Art",
+        "description": "Creatieve designs en decoraties naar wens",
+        "description_en": "Creative designs and decorations to your liking",
+        "price": "v.a. €5",
+        "duration": "15+ min"
+      },
+      {
+        "name": "BIAB / Builder Gel",
+        "name_en": "BIAB / Builder Gel",
+        "description": "Versterkende gel overlay voor natuurlijke nagels",
+        "description_en": "Strengthening gel overlay for natural nails",
+        "price": "€45",
+        "duration": "60 min"
+      }
     ],
     "aboutFeatures": [
-      { "text": "Hoogwaardige producten van top merken", "text_en": "High-quality products from top brands" },
-      { "text": "Strenge hygiëne standaarden", "text_en": "Strict hygiene standards" },
-      { "text": "Persoonlijk advies voor elke klant", "text_en": "Personal advice for every client" },
-      { "text": "Ontspannen en gezellige sfeer", "text_en": "Relaxing and welcoming atmosphere" }
-    ]
+      {
+        "text": "Hoogwaardige producten van top merken",
+        "text_en": "High-quality products from top brands"
+      },
+      {
+        "text": "Strenge hygiëne standaarden",
+        "text_en": "Strict hygiene standards"
+      },
+      {
+        "text": "Persoonlijk advies voor elke klant",
+        "text_en": "Personal advice for every client"
+      },
+      {
+        "text": "Ontspannen en gezellige sfeer",
+        "text_en": "Relaxing and welcoming atmosphere"
+      }
+    ],
+    "pricingItems": [
+      {
+        "icon": "fa-solid fa-hand-sparkles",
+        "name": "Manicure Classic",
+        "name_en": "Classic Manicure",
+        "description": "Inclusief vijlen, riemen en polish",
+        "description_en": "Includes filing, cuticles and polish",
+        "price": "€ 25"
+      },
+      {
+        "icon": "fa-solid fa-gem",
+        "name": "Gelnagels",
+        "name_en": "Gel Nails",
+        "description": "Set gellak nieuw, lang houdbaar",
+        "description_en": "Full gel set, long lasting",
+        "price": "€ 40"
+      },
+      {
+        "icon": "fa-solid fa-droplet",
+        "name": "Acrylnagels",
+        "name_en": "Acrylic Nails",
+        "description": "Verlenging met acryl, sterke finish",
+        "description_en": "Acrylic extensions, strong finish",
+        "price": "€ 50"
+      },
+      {
+        "icon": "fa-solid fa-spa",
+        "name": "Pedicure",
+        "name_en": "Pedicure",
+        "description": "Volledige voetbehandeling",
+        "description_en": "Complete foot treatment",
+        "price": "€ 35"
+      },
+      {
+        "icon": "fa-solid fa-palette",
+        "name": "Nail Art",
+        "name_en": "Nail Art",
+        "description": "Per nagel, kies je eigen design",
+        "description_en": "Per nail, your own design",
+        "price": "€ 5"
+      },
+      {
+        "icon": "fa-solid fa-wand-magic-sparkles",
+        "name": "Bijvulling",
+        "name_en": "Fill",
+        "description": "Bijwerk van uw bestaande set",
+        "description_en": "Refill on existing set",
+        "price": "€ 30"
+      }
+    ],
+    "pricingTitle": "Onze Prijzen",
+    "pricingTitle_en": "Our Prices",
+    "showPricing": true
   },
-
   "waxing_studio": {
     "label": "Waxing Studio",
     "colors": {
@@ -58,27 +180,149 @@
     "servicesSubtitle": "Professionele waxbehandelingen voor elk lichaamsdeel",
     "servicesSubtitle_en": "Professional waxing treatments for every body part",
     "usps": [
-      { "icon": "✨", "text": "Zijdezacht Resultaat", "text_en": "Silky Smooth Results" },
-      { "icon": "🌿", "text": "Natuurlijke Wax", "text_en": "Natural Wax" },
-      { "icon": "⭐", "text": "Ervaren Specialisten", "text_en": "Experienced Specialists" },
-      { "icon": "❤️", "text": "Minimale Irritatie", "text_en": "Minimal Irritation" }
+      {
+        "icon": "✨",
+        "text": "Zijdezacht Resultaat",
+        "text_en": "Silky Smooth Results"
+      },
+      {
+        "icon": "🌿",
+        "text": "Natuurlijke Wax",
+        "text_en": "Natural Wax"
+      },
+      {
+        "icon": "⭐",
+        "text": "Ervaren Specialisten",
+        "text_en": "Experienced Specialists"
+      },
+      {
+        "icon": "❤️",
+        "text": "Minimale Irritatie",
+        "text_en": "Minimal Irritation"
+      }
     ],
     "treatments": [
-      { "name": "Wenkbrauwen Wax", "name_en": "Eyebrow Wax", "description": "Perfecte wenkbrauwvorm met warme wax", "description_en": "Perfect eyebrow shape with warm wax", "price": "€12", "duration": "15 min" },
-      { "name": "Bovenlip Wax", "name_en": "Upper Lip Wax", "description": "Snel en effectief, minimale irritatie", "description_en": "Quick and effective, minimal irritation", "price": "€8", "duration": "10 min" },
-      { "name": "Volledige Benen", "name_en": "Full Legs", "description": "Langdurig gladde benen met warme wax", "description_en": "Long-lasting smooth legs with warm wax", "price": "€35", "duration": "45 min" },
-      { "name": "Bikinilijn", "name_en": "Bikini Line", "description": "Nette en verzorgde bikinilijn", "description_en": "Neat and groomed bikini line", "price": "€25", "duration": "20 min" },
-      { "name": "Brazilian Wax", "name_en": "Brazilian Wax", "description": "Volledige ontharing met premium wax", "description_en": "Full hair removal with premium wax", "price": "€45", "duration": "30 min" },
-      { "name": "Oksels Wax", "name_en": "Underarm Wax", "description": "Snelle en effectieve ontharing", "description_en": "Quick and effective hair removal", "price": "€15", "duration": "15 min" }
+      {
+        "name": "Wenkbrauwen Wax",
+        "name_en": "Eyebrow Wax",
+        "description": "Perfecte wenkbrauwvorm met warme wax",
+        "description_en": "Perfect eyebrow shape with warm wax",
+        "price": "€12",
+        "duration": "15 min"
+      },
+      {
+        "name": "Bovenlip Wax",
+        "name_en": "Upper Lip Wax",
+        "description": "Snel en effectief, minimale irritatie",
+        "description_en": "Quick and effective, minimal irritation",
+        "price": "€8",
+        "duration": "10 min"
+      },
+      {
+        "name": "Volledige Benen",
+        "name_en": "Full Legs",
+        "description": "Langdurig gladde benen met warme wax",
+        "description_en": "Long-lasting smooth legs with warm wax",
+        "price": "€35",
+        "duration": "45 min"
+      },
+      {
+        "name": "Bikinilijn",
+        "name_en": "Bikini Line",
+        "description": "Nette en verzorgde bikinilijn",
+        "description_en": "Neat and groomed bikini line",
+        "price": "€25",
+        "duration": "20 min"
+      },
+      {
+        "name": "Brazilian Wax",
+        "name_en": "Brazilian Wax",
+        "description": "Volledige ontharing met premium wax",
+        "description_en": "Full hair removal with premium wax",
+        "price": "€45",
+        "duration": "30 min"
+      },
+      {
+        "name": "Oksels Wax",
+        "name_en": "Underarm Wax",
+        "description": "Snelle en effectieve ontharing",
+        "description_en": "Quick and effective hair removal",
+        "price": "€15",
+        "duration": "15 min"
+      }
     ],
     "aboutFeatures": [
-      { "text": "Premium kwaliteit wax producten", "text_en": "Premium quality wax products" },
-      { "text": "Hygiënisch en steriel werkproces", "text_en": "Hygienic and sterile process" },
-      { "text": "Ervaren wax specialisten", "text_en": "Experienced wax specialists" },
-      { "text": "Comfortabele en discrete behandeling", "text_en": "Comfortable and discreet treatment" }
-    ]
+      {
+        "text": "Premium kwaliteit wax producten",
+        "text_en": "Premium quality wax products"
+      },
+      {
+        "text": "Hygiënisch en steriel werkproces",
+        "text_en": "Hygienic and sterile process"
+      },
+      {
+        "text": "Ervaren wax specialisten",
+        "text_en": "Experienced wax specialists"
+      },
+      {
+        "text": "Comfortabele en discrete behandeling",
+        "text_en": "Comfortable and discreet treatment"
+      }
+    ],
+    "pricingItems": [
+      {
+        "icon": "fa-solid fa-eye",
+        "name": "Wenkbrauwen",
+        "name_en": "Eyebrows",
+        "description": "Vorm en epileren",
+        "description_en": "Shape and wax",
+        "price": "€ 15"
+      },
+      {
+        "icon": "fa-solid fa-leaf",
+        "name": "Bovenlip",
+        "name_en": "Upper Lip",
+        "description": "Snel en grondig",
+        "description_en": "Fast and thorough",
+        "price": "€ 10"
+      },
+      {
+        "icon": "fa-solid fa-hand-sparkles",
+        "name": "Oksels",
+        "name_en": "Underarms",
+        "description": "Volledig harsen",
+        "description_en": "Full wax",
+        "price": "€ 15"
+      },
+      {
+        "icon": "fa-solid fa-droplet",
+        "name": "Bikinilijn",
+        "name_en": "Bikini Line",
+        "description": "Klassiek of Brazilian",
+        "description_en": "Classic or Brazilian",
+        "price": "€ 25"
+      },
+      {
+        "icon": "fa-solid fa-leaf",
+        "name": "Benen Vol",
+        "name_en": "Full Legs",
+        "description": "Onderbenen plus bovenbenen",
+        "description_en": "Lower plus upper legs",
+        "price": "€ 40"
+      },
+      {
+        "icon": "fa-solid fa-spa",
+        "name": "Rug Heren",
+        "name_en": "Men's Back",
+        "description": "Volledige rug harsen",
+        "description_en": "Full back wax",
+        "price": "€ 35"
+      }
+    ],
+    "pricingTitle": "Onze Tarieven",
+    "pricingTitle_en": "Our Rates",
+    "showPricing": true
   },
-
   "skin_therapy": {
     "label": "Huidtherapie",
     "colors": {
@@ -98,27 +342,149 @@
     "servicesSubtitle": "Professionele huidbehandelingen afgestemd op uw huid",
     "servicesSubtitle_en": "Professional skin treatments tailored to your skin",
     "usps": [
-      { "icon": "🌿", "text": "Natuurlijke Ingrediënten", "text_en": "Natural Ingredients" },
-      { "icon": "🔬", "text": "Huidanalyse", "text_en": "Skin Analysis" },
-      { "icon": "⭐", "text": "Gecertificeerde Specialisten", "text_en": "Certified Specialists" },
-      { "icon": "💎", "text": "Premium Merken", "text_en": "Premium Brands" }
+      {
+        "icon": "🌿",
+        "text": "Natuurlijke Ingrediënten",
+        "text_en": "Natural Ingredients"
+      },
+      {
+        "icon": "🔬",
+        "text": "Huidanalyse",
+        "text_en": "Skin Analysis"
+      },
+      {
+        "icon": "⭐",
+        "text": "Gecertificeerde Specialisten",
+        "text_en": "Certified Specialists"
+      },
+      {
+        "icon": "💎",
+        "text": "Premium Merken",
+        "text_en": "Premium Brands"
+      }
     ],
     "treatments": [
-      { "name": "Gezichtsbehandeling Basis", "name_en": "Basic Facial", "description": "Reiniging, peeling, masker en verzorging voor een frisse huid", "description_en": "Cleansing, peeling, mask and care for fresh skin", "price": "€55", "duration": "60 min" },
-      { "name": "Anti-Aging Behandeling", "name_en": "Anti-Aging Treatment", "description": "Intensieve behandeling tegen huidveroudering met premium serums", "description_en": "Intensive treatment against skin aging with premium serums", "price": "€85", "duration": "75 min" },
-      { "name": "Chemische Peeling", "name_en": "Chemical Peel", "description": "Vernieuwt de huid en vermindert oneffenheden", "description_en": "Renews skin and reduces imperfections", "price": "€75", "duration": "45 min" },
-      { "name": "Microneedling", "name_en": "Microneedling", "description": "Stimuleert collageen voor een stevigere, gladdere huid", "description_en": "Stimulates collagen for firmer, smoother skin", "price": "€95", "duration": "60 min" },
-      { "name": "Acne Behandeling", "name_en": "Acne Treatment", "description": "Doelgerichte behandeling voor een zuivere huid", "description_en": "Targeted treatment for clear skin", "price": "€65", "duration": "60 min" },
-      { "name": "Hydrafacial", "name_en": "Hydrafacial", "description": "Diepe reiniging en hydratatie in één behandeling", "description_en": "Deep cleansing and hydration in one treatment", "price": "€110", "duration": "60 min" }
+      {
+        "name": "Gezichtsbehandeling Basis",
+        "name_en": "Basic Facial",
+        "description": "Reiniging, peeling, masker en verzorging voor een frisse huid",
+        "description_en": "Cleansing, peeling, mask and care for fresh skin",
+        "price": "€55",
+        "duration": "60 min"
+      },
+      {
+        "name": "Anti-Aging Behandeling",
+        "name_en": "Anti-Aging Treatment",
+        "description": "Intensieve behandeling tegen huidveroudering met premium serums",
+        "description_en": "Intensive treatment against skin aging with premium serums",
+        "price": "€85",
+        "duration": "75 min"
+      },
+      {
+        "name": "Chemische Peeling",
+        "name_en": "Chemical Peel",
+        "description": "Vernieuwt de huid en vermindert oneffenheden",
+        "description_en": "Renews skin and reduces imperfections",
+        "price": "€75",
+        "duration": "45 min"
+      },
+      {
+        "name": "Microneedling",
+        "name_en": "Microneedling",
+        "description": "Stimuleert collageen voor een stevigere, gladdere huid",
+        "description_en": "Stimulates collagen for firmer, smoother skin",
+        "price": "€95",
+        "duration": "60 min"
+      },
+      {
+        "name": "Acne Behandeling",
+        "name_en": "Acne Treatment",
+        "description": "Doelgerichte behandeling voor een zuivere huid",
+        "description_en": "Targeted treatment for clear skin",
+        "price": "€65",
+        "duration": "60 min"
+      },
+      {
+        "name": "Hydrafacial",
+        "name_en": "Hydrafacial",
+        "description": "Diepe reiniging en hydratatie in één behandeling",
+        "description_en": "Deep cleansing and hydration in one treatment",
+        "price": "€110",
+        "duration": "60 min"
+      }
     ],
     "aboutFeatures": [
-      { "text": "Persoonlijke huidanalyse bij elke behandeling", "text_en": "Personal skin analysis with every treatment" },
-      { "text": "Dermatologisch geteste producten", "text_en": "Dermatologically tested products" },
-      { "text": "Resultaatgericht behandelplan", "text_en": "Results-oriented treatment plan" },
-      { "text": "Wetenschappelijk onderbouwde methoden", "text_en": "Scientifically proven methods" }
-    ]
+      {
+        "text": "Persoonlijke huidanalyse bij elke behandeling",
+        "text_en": "Personal skin analysis with every treatment"
+      },
+      {
+        "text": "Dermatologisch geteste producten",
+        "text_en": "Dermatologically tested products"
+      },
+      {
+        "text": "Resultaatgericht behandelplan",
+        "text_en": "Results-oriented treatment plan"
+      },
+      {
+        "text": "Wetenschappelijk onderbouwde methoden",
+        "text_en": "Scientifically proven methods"
+      }
+    ],
+    "pricingItems": [
+      {
+        "icon": "fa-solid fa-spa",
+        "name": "Gezichtsbehandeling",
+        "name_en": "Facial Treatment",
+        "description": "Reiniging, peeling en masker",
+        "description_en": "Cleanse, peel and mask",
+        "price": "€ 55"
+      },
+      {
+        "icon": "fa-solid fa-droplet",
+        "name": "Diepe Reiniging",
+        "name_en": "Deep Cleanse",
+        "description": "Voor onzuivere huid",
+        "description_en": "For oily or impure skin",
+        "price": "€ 70"
+      },
+      {
+        "icon": "fa-solid fa-gem",
+        "name": "Anti-Aging",
+        "name_en": "Anti-Aging",
+        "description": "Intensieve verjongingsbehandeling",
+        "description_en": "Intensive rejuvenation",
+        "price": "€ 85"
+      },
+      {
+        "icon": "fa-solid fa-wand-magic-sparkles",
+        "name": "Microdermabrasie",
+        "name_en": "Microdermabrasion",
+        "description": "Diamant peeling",
+        "description_en": "Diamond peel",
+        "price": "€ 75"
+      },
+      {
+        "icon": "fa-solid fa-leaf",
+        "name": "LED-Therapie",
+        "name_en": "LED Therapy",
+        "description": "Stimuleert celvernieuwing",
+        "description_en": "Stimulates cell renewal",
+        "price": "€ 60"
+      },
+      {
+        "icon": "fa-solid fa-eye",
+        "name": "Huidanalyse",
+        "name_en": "Skin Analysis",
+        "description": "Persoonlijk advies",
+        "description_en": "Personal advice",
+        "price": "€ 25"
+      }
+    ],
+    "pricingTitle": "Behandelingstarieven",
+    "pricingTitle_en": "Treatment Rates",
+    "showPricing": true
   },
-
   "lash_studio": {
     "label": "Wimper Studio",
     "colors": {
@@ -138,24 +504,147 @@
     "servicesSubtitle": "Van natuurlijk tot dramatisch — wij hebben de perfecte set voor u",
     "servicesSubtitle_en": "From natural to dramatic — we have the perfect set for you",
     "usps": [
-      { "icon": "👁️", "text": "Premium Wimpers", "text_en": "Premium Lashes" },
-      { "icon": "✨", "text": "Lichtgewicht & Comfortabel", "text_en": "Lightweight & Comfortable" },
-      { "icon": "⭐", "text": "Gecertificeerde Stylisten", "text_en": "Certified Stylists" },
-      { "icon": "❤️", "text": "Langdurig Resultaat", "text_en": "Long-Lasting Results" }
+      {
+        "icon": "👁️",
+        "text": "Premium Wimpers",
+        "text_en": "Premium Lashes"
+      },
+      {
+        "icon": "✨",
+        "text": "Lichtgewicht & Comfortabel",
+        "text_en": "Lightweight & Comfortable"
+      },
+      {
+        "icon": "⭐",
+        "text": "Gecertificeerde Stylisten",
+        "text_en": "Certified Stylists"
+      },
+      {
+        "icon": "❤️",
+        "text": "Langdurig Resultaat",
+        "text_en": "Long-Lasting Results"
+      }
     ],
     "treatments": [
-      { "name": "Classic Set", "name_en": "Classic Set", "description": "Natuurlijke look met één extension per wimper", "description_en": "Natural look with one extension per lash", "price": "€75", "duration": "90 min" },
-      { "name": "Volume Set", "name_en": "Volume Set", "description": "Voller en dramatischer effect met lichte fans", "description_en": "Fuller, more dramatic effect with light fans", "price": "€95", "duration": "120 min" },
-      { "name": "Mega Volume", "name_en": "Mega Volume", "description": "Maximaal volume voor een glamoureuze uitstraling", "description_en": "Maximum volume for a glamorous look", "price": "€115", "duration": "150 min" },
-      { "name": "Wimper Lift + Verf", "name_en": "Lash Lift + Tint", "description": "Natuurlijke lift en kleur voor uw eigen wimpers", "description_en": "Natural lift and color for your own lashes", "price": "€45", "duration": "45 min" },
-      { "name": "Refill (2-3 weken)", "name_en": "Refill (2-3 weeks)", "description": "Onderhoud om uw set fris en vol te houden", "description_en": "Maintenance to keep your set fresh and full", "price": "€45", "duration": "60 min" },
-      { "name": "Wimper Verwijdering", "name_en": "Lash Removal", "description": "Veilige en zachte verwijdering van extensions", "description_en": "Safe and gentle removal of extensions", "price": "€15", "duration": "20 min" }
+      {
+        "name": "Classic Set",
+        "name_en": "Classic Set",
+        "description": "Natuurlijke look met één extension per wimper",
+        "description_en": "Natural look with one extension per lash",
+        "price": "€75",
+        "duration": "90 min"
+      },
+      {
+        "name": "Volume Set",
+        "name_en": "Volume Set",
+        "description": "Voller en dramatischer effect met lichte fans",
+        "description_en": "Fuller, more dramatic effect with light fans",
+        "price": "€95",
+        "duration": "120 min"
+      },
+      {
+        "name": "Mega Volume",
+        "name_en": "Mega Volume",
+        "description": "Maximaal volume voor een glamoureuze uitstraling",
+        "description_en": "Maximum volume for a glamorous look",
+        "price": "€115",
+        "duration": "150 min"
+      },
+      {
+        "name": "Wimper Lift + Verf",
+        "name_en": "Lash Lift + Tint",
+        "description": "Natuurlijke lift en kleur voor uw eigen wimpers",
+        "description_en": "Natural lift and color for your own lashes",
+        "price": "€45",
+        "duration": "45 min"
+      },
+      {
+        "name": "Refill (2-3 weken)",
+        "name_en": "Refill (2-3 weeks)",
+        "description": "Onderhoud om uw set fris en vol te houden",
+        "description_en": "Maintenance to keep your set fresh and full",
+        "price": "€45",
+        "duration": "60 min"
+      },
+      {
+        "name": "Wimper Verwijdering",
+        "name_en": "Lash Removal",
+        "description": "Veilige en zachte verwijdering van extensions",
+        "description_en": "Safe and gentle removal of extensions",
+        "price": "€15",
+        "duration": "20 min"
+      }
     ],
     "aboutFeatures": [
-      { "text": "Hoogwaardige Koreaanse wimpers", "text_en": "High-quality Korean lashes" },
-      { "text": "Hypoallergene lijm", "text_en": "Hypoallergenic adhesive" },
-      { "text": "Gecertificeerde lash artists", "text_en": "Certified lash artists" },
-      { "text": "Comfortabele behandelstoel", "text_en": "Comfortable treatment chair" }
-    ]
+      {
+        "text": "Hoogwaardige Koreaanse wimpers",
+        "text_en": "High-quality Korean lashes"
+      },
+      {
+        "text": "Hypoallergene lijm",
+        "text_en": "Hypoallergenic adhesive"
+      },
+      {
+        "text": "Gecertificeerde lash artists",
+        "text_en": "Certified lash artists"
+      },
+      {
+        "text": "Comfortabele behandelstoel",
+        "text_en": "Comfortable treatment chair"
+      }
+    ],
+    "pricingItems": [
+      {
+        "icon": "fa-solid fa-feather",
+        "name": "Classic Lashes",
+        "name_en": "Classic Lashes",
+        "description": "1 op 1 wimperextensions",
+        "description_en": "1 to 1 lash extensions",
+        "price": "€ 75"
+      },
+      {
+        "icon": "fa-solid fa-feather",
+        "name": "Volume Lashes",
+        "name_en": "Volume Lashes",
+        "description": "Voller resultaat met meerdere fans",
+        "description_en": "Fuller result, fan technique",
+        "price": "€ 95"
+      },
+      {
+        "icon": "fa-solid fa-gem",
+        "name": "Mega Volume",
+        "name_en": "Mega Volume",
+        "description": "Maximaal volume",
+        "description_en": "Maximum volume",
+        "price": "€ 125"
+      },
+      {
+        "icon": "fa-solid fa-eye",
+        "name": "Wimperlift",
+        "name_en": "Lash Lift",
+        "description": "Eigen wimpers krullen en verven",
+        "description_en": "Curl and tint own lashes",
+        "price": "€ 50"
+      },
+      {
+        "icon": "fa-solid fa-leaf",
+        "name": "Brow Lamination",
+        "name_en": "Brow Lamination",
+        "description": "Volle, opgaande wenkbrauwen",
+        "description_en": "Full, lifted brows",
+        "price": "€ 45"
+      },
+      {
+        "icon": "fa-solid fa-feather",
+        "name": "Bijvulling Lashes",
+        "name_en": "Lash Fill",
+        "description": "Bijwerk binnen 3 weken",
+        "description_en": "Refill within 3 weeks",
+        "price": "€ 45"
+      }
+    ],
+    "pricingTitle": "Onze Tarieven",
+    "pricingTitle_en": "Our Rates",
+    "showPricing": true
   }
 }
